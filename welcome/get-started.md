@@ -16,7 +16,7 @@ Let's create a simple agent that can navigate rooms and serve glasses - a perfec
 
 ### 1. Installation
 
-_You  need to have a robot implementing the Innate SDK. Innate is selling our first such robots for $3,000 a piece,_ [_see our website_](https://innate.bot)_._
+_You  need to have a robot implementing the Innate SDK. Innate is selling our first such robots for $2,000 a piece,_ [_see our website_](https://innate.bot)_._
 
 ```bash
 pip install innate-sdk 
