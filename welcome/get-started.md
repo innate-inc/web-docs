@@ -19,21 +19,12 @@ Let's create a simple agent that can navigate rooms and serve glasses - a perfec
 _You  need to have a robot implementing the Innate SDK. Innate is selling our first such robots for $3,000 a piece,_ [_see our website_](https://innate.bot)_._
 
 ```bash
-pip install innate-sdk
+pip install innate-sdk 
 ```
 
-### 2. Basic Setup
+Then follow the instructions in [maurice-setup.md](../setup/maurice-setup.md "mention") and [workstation-setup.md](../setup/workstation-setup.md "mention").
 
-You can start a project in a new directory in the robot (after logging in via SSH)
-
-```python
-from innate import Agent, Primitive, Directive
-from innate import manipulation, navigation
-from typing import List
-
-# Initialize your robot as an agent
-robot = Agent()
-```
+You can start coding right after by defining files in `~/primitives` and `~/directives`
 
 ### 3. Create Glass Handling Primitives
 
@@ -41,6 +32,10 @@ A primitive is akin to a function call for an LLM. This is what the robot will c
 
 ```python
 # Create a primitive for grabbing cardboard glasses
+# In ~/primitives/grab_glass.py
+from innate import Primitive, manipulation
+from typing import List
+
 class GrabGlass(Primitive):
     def init(self):
         super().init()
@@ -55,6 +50,7 @@ class GrabGlass(Primitive):
         await manipulation.run_policy("pickup_glass")
         return "Retrieved glass.", True
 
+# In ~/primitives/serve_glass.py
 class ServeGlass(Primitive):
     def __init__(self):
         super().__init__()
@@ -89,12 +85,13 @@ Below is how the process looks like once you're in training mode. The SDK will g
 This is what describes the purpose of the robot during its execution. You can switch between directives. Here, the directive makes sure the robot is aware of its physical capabilities to act in the real world.
 
 ```python
+# In ~/directives/serving_directive
+from innate import Directive
+from typing import List
+
 class ServingDirective(Directive):
-    def __init__():
-        self.primitives = [GrabGlass(), ServeGlass()]
-    
-    def get_primitives(self) -> List[Primitive]:
-        return self.primitives
+    def get_primitives(self) -> List[str]:
+        return ["grab_glass", "serve_glass"] # Refers to the files defined above
     
     def get_prompt(self) -> str:
         return """You are a helpful robot called Maurice that serves drinks to people.
@@ -112,15 +109,13 @@ robot.set_directive(ServingDirective())
 
 First move the robot around a little with the app so that it memorizes the place.&#x20;
 
-Then let the agent run.
+Then let the agent run, using either the app, or the terminal:
 
-```python
-# Start the robot with the serving directive
-robot.run()
-
-#Your robot will now be serving glasses,
-# navigating between rooms and interacting with people
+```bash
+innate sdk directive activate serving_directive
 ```
+
+
 
 This is what the resulting execution looks like:
 
