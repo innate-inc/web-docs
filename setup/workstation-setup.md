@@ -23,7 +23,7 @@ Installation Options:
 1. Base Python Environment:
 
 ```bash
-pip install maurice-sdk
+pip install innate-sdk
 ```
 
 1. Virtual Environment (recommended):
@@ -36,16 +36,16 @@ python3.10 -m venv maurice-env
 source maurice-env/bin/activate
 
 # Install SDK
-pip install maurice-sdk
+pip install innate-sdk
 ```
 
 1. Conda Environment:
 
 ```sh
 # Create conda environment
-conda create -n maurice-env python=3.10
-conda activate maurice-env
-pip install maurice-sdk
+conda create -n innnate-env python=3.10
+conda activate innate-env
+pip install innnate-sdk
 ```
 
 Note: Using a virtual environment (venv) or conda environment is recommended for isolation and dependency management.
@@ -60,7 +60,7 @@ Note: Using a virtual environment (venv) or conda environment is recommended for
 3.  Initialize SSH connection:
 
     ```bash
-    maurice-sdk connect
+    innate-sdk connect
     ```
 
     * When prompted to add Maurice to SSH config, enter 'Y'
@@ -69,7 +69,7 @@ Note: Using a virtual environment (venv) or conda environment is recommended for
 This should open an SSH session to Maurice
 
 ```sh
-maurice-sdk ssh
+innate-sdk ssh
 ```
 
 5. VS Code Setup (Optional):
@@ -85,7 +85,7 @@ maurice-sdk ssh
 1.  Run the initialization command:
 
     ```bash
-    maurice-sdk init
+    innate-sdk init
     ```
 2. Authentication:
    * A browser tab will automatically open

@@ -51,7 +51,7 @@ Each primitive consists of three essential components:
 To create a new primitive, create a Python file in the `~/primitives` directory. Here's the basic structure:
 
 ```python
-from maurice_sdk.primitive import Primitive
+from innate.primitive import Primitive
 from typing import Tuple
 
 class MyPrimitive(Primitive):
@@ -111,8 +111,8 @@ Key Implementation Points:
 
 ```python
 
-from maurice_sdk.primitive import Primitive
-from maurice_sdk import navigation, manipulation
+from innate.primitive import Primitive
+from innate import navigation, manipulation
 import numpy as np
 from typing import Tuple
 
@@ -169,8 +169,8 @@ Key Implementation Points:
 
 ```python
 
-from maurice_sdk.primitive import Primitive
-from maurice_sdk import navigation, manipulation
+from innate.primitive import Primitive
+from innate import navigation, manipulation
 import time
 from typing import Tuple
 
@@ -236,8 +236,8 @@ Key Implementation Points:
 
 ```python
 
-from maurice_sdk.primitive import Primitive
-from maurice_sdk import manipulation
+from innate.primitive import Primitive
+from innate import manipulation
 import smtplib
 from email.message import EmailMessage
 import time
@@ -303,8 +303,8 @@ A sensor integration primitive that combines gas sensing with robot navigation t
 
 ```python
 
-from maurice_sdk.primitive import Primitive
-from maurice_sdk import navigation
+from innate.primitive import Primitive
+from innate import navigation
 import board
 import adafruit_sgp30
 import smtplib

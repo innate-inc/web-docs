@@ -2,12 +2,13 @@
 
 ## Welcome
 
-* [Welcome](README.md)
+* [Home](README.md)
+* [Get started](welcome/get-started.md)
 
-## Quickstart
+## Setup
 
-* [Maurice Setup](quickstart/maurice-setup.md)
-* [Workstation Setup](quickstart/workstation-setup.md)
+* [Maurice Setup](setup/maurice-setup.md)
+* [Workstation Setup](setup/workstation-setup.md)
 
 ## BASICS
 

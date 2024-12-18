@@ -29,7 +29,7 @@ Users can develop manipulation strategies through multiple approaches:
 * Hardcoded motion sequences for repeatable tasks
 * Recorded trajectories that can be played back for specific operations
 
-The arm's integration with the maurice-sdk enables straightforward development of both learned and programmatic manipulation policies. Through the included leader arm interface, users can easily demonstrate desired behaviors, which can then be used to train learning-based policies or recorded for direct playback.
+The arm's integration with the innate SDK enables straightforward development of both learned and programmatic manipulation policies. Through the included leader arm interface, users can easily demonstrate desired behaviors, which can then be used to train learning-based policies or recorded for direct playback.
 
 ***
 
@@ -91,14 +91,14 @@ To teleoperate the robot using the included leader arm:
 
 1. Prerequisites:
    * Ensure no other manipulation tasks are running
-   * Use command: `maurice-sdk manipulation pause`
+   * Use command: `innate manipulation pause`
    * Have access to a workstation with available USB-C port
 2. Hardware Connection:
    * Connect leader arm to workstation via USB-C
    * Note: Leader arm can draw up to 1 Amp of current
    * Ensure stable power supply to workstation
 3. Initialization:
-   * Enter command: `maurice-sdk manipulation teleop`
+   * Enter command: `innate manipulation teleop`
    * Wait for initialization (takes a few seconds)
    * System will initialize both leader and follower arms
 4. Operation:
@@ -119,7 +119,7 @@ To teleoperate the robot using the included leader arm:
 3. Run initialization command:
 
 ```bash
-maurice-sdk manipulation train
+innate manipulation train
 ```
 
 #### **Task Configuration**
@@ -226,7 +226,7 @@ The process enables technical users to develop manipulation policies based on pr
 
 ```bash
 
-maurice-sdk manipulation train
+innate manipulation train
 
 ```
 
@@ -286,7 +286,7 @@ Once teleoperation mode initializes, use the following controls:
 1. List All Tasks
 
 ```bash
-maurice-sdk data list
+innate data list
 ```
 
 This command displays:
@@ -298,7 +298,7 @@ This command displays:
 1. View Task Details
 
 ```bash
-maurice-sdk data status task_name
+innate data status task_name
 ```
 
 This command shows:
@@ -318,7 +318,7 @@ To add additional demonstrations to an existing task:
 
 ```bash
 
-maurice-sdk manipulation train
+innate manipulation train
 
 ```
 
@@ -331,7 +331,7 @@ maurice-sdk manipulation train
 **Upload Command**
 
 ```bash
-maurice-sdk data upload task_name
+innate data upload task_name
 
 ```
 
@@ -344,7 +344,7 @@ maurice-sdk data upload task_name
 **Monitor Progress** Check upload status using:
 
 ```bash
-maurice-sdk data upload task_name -p
+innate data upload task_name -p
 
 ```
 
@@ -389,7 +389,7 @@ Training runs in background and can be monitored via the policy console, where y
 **Download Command**
 
 ```bash
-maurice-sdk policy download task_name
+innate policy download task_name
 ```
 
 **Storage Location**
@@ -401,7 +401,7 @@ maurice-sdk policy download task_name
 To test the downloaded policy, use:
 
 ```bash
-maurice-sdk policy run task_name -t num_seconds
+innate policy run task_name -t num_seconds
 ```
 
 This will run the policy for the specified number of seconds.
@@ -413,7 +413,7 @@ This will run the policy for the specified number of seconds.
 **Setup**
 
 ```python
-from maurice_sdk import manipulation
+from innate import manipulation
 manipulation.init()
 ```
 
@@ -469,7 +469,7 @@ manipulation.interrupt()
 **Example Usage**
 
 ```python
-from maurice_sdk import manipulation
+from innate import manipulation
 import time
 import numpy as np
 
@@ -527,63 +527,63 @@ manipulation.run_behavior("wave_hello")
 **Get joint positions**
 
 ```bash
-maurice-sdk manipulation get-joint-pose
+innate manipulation get-joint-pose
 # Returns: Six space-separated values representing joint angles in radians
 ```
 
 **Set joint positions**
 
 ```bash
-maurice-sdk manipulation set-joint-pose j1 j2 j3 j4 j5 j6
+innate manipulation set-joint-pose j1 j2 j3 j4 j5 j6
 # Input: 6 space-separated float values representing joint angles in radians
 ```
 
 **Get end effector pose**
 
 ```bash
-maurice-sdk manipulation get-ee-pose
+innate manipulation get-ee-pose
 # Returns: Seven space-separated values (position x y z and quaternion x y z w)
 ```
 
 **Set end effector pose**
 
 ```bash
-maurice-sdk manipulation set-ee-pose x y z qx qy qz qw
+innate manipulation set-ee-pose x y z qx qy qz qw
 # Input:#   - Position: 3 space-separated floats (x y z)#   - Quaternion: 4 space-separated floats (qx qy qz qw)
 ```
 
 **Get gripper pressure**
 
 ```bash
-maurice-sdk manipulation get-gripper-pressure
+innate manipulation get-gripper-pressure
 # Returns: Float value between 0 and 1
 ```
 
 **Set gripper pressure**
 
 ```bash
-maurice-sdk manipulation set-gripper-pressure pressure
+innate manipulation set-gripper-pressure pressure
 # Input: Float value between 0 and 1
 ```
 
 **Run behavior**
 
 ```bash
-maurice-sdk manipulation run-behavior task_name
+innate manipulation run-behavior task_name
 # Input: String name of the recorded behavior
 ```
 
 **Run policy**
 
 ```bash
-maurice-sdk manipulation run-policy task_name -t time
+innate manipulation run-policy task_name -t time
 # Input:#   - task_name: String name of the policy#   - time: Integer number of seconds to run
 ```
 
 **Interrupt execution**
 
 ```bash
-maurice-sdk manipulation interrupt
+innate manipulation interrupt
 ```
 
 **Example Usage**
@@ -595,38 +595,38 @@ echo "Testing various manipulation commands..."
 
 # Get current joint positions
 echo "Current joint positions:"
-maurice-sdk manipulation get-joint-pose
+innate manipulation get-joint-pose
 
 # Move to a specific joint configuration (small angles)
 echo "Moving to new position..."
-maurice-sdk manipulation set-joint-pose 0.0 -0.2 0.3 0.0 -0.2 0.0
+innate manipulation set-joint-pose 0.0 -0.2 0.3 0.0 -0.2 0.0
 sleep 2
 
 # Get end effector pose
 echo "Current end effector pose:"
-maurice-sdk manipulation get-ee-pose
+innate manipulation get-ee-pose
 
 # Move end effector to new pose (small movements)
 echo "Moving end effector..."
 # Moving to position slightly forward and up (1cm increments)
-maurice-sdk manipulation set-ee-pose 0.01 0.0 0.01 0.0 0.0 0.0 1.0
+innate manipulation set-ee-pose 0.01 0.0 0.01 0.0 0.0 0.0 1.0
 sleep 2
 
 # Test gripper
 echo "Testing gripper..."
-maurice-sdk manipulation set-gripper-pressure 0.5
+innate manipulation set-gripper-pressure 0.5
 sleep 1
-maurice-sdk manipulation set-gripper-pressure 0.0
+innate manipulation set-gripper-pressure 0.0
 sleep 1
 
 # Run a recorded behavior
 echo "Running wave behavior..."
-maurice-sdk manipulation run-behavior wave_hello
+innate manipulation run-behavior wave_hello
 sleep 3
 
 # Run a policy for 5 seconds
 echo "Running pick and place policy..."
-maurice-sdk manipulation run-policy pick_and_place -t 5
+innate manipulation run-policy pick_and_place -t 5
 
 echo "Done!"
 ```

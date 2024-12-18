@@ -38,7 +38,7 @@ The system continuously updates its environmental understanding through the pose
   * This position will serve as the map's origin
   * Note: Choose this position carefully as it will be your reference point
 * **Start Mapping**
-  * Execute command: `maurice-sdk map new`
+  * Execute command: `innate map new`
   * Enter your desired map name when prompted
   * A visualization window will appear showing:
     * Current map generation
@@ -58,7 +58,7 @@ The system continuously updates its environmental understanding through the pose
   *   To view your created map, use command:
 
       ```bash
-      maurice-sdk map view map_name
+      innate map view map_name
       ```
 
 ### Pose Graph Map
@@ -68,13 +68,13 @@ The system continuously updates its environmental understanding through the pose
    *   Load your previously created map using:
 
        ```
-       maurice-sdk map load map_name
+       innate map load map_name
        ```
 2. **Create New Pose-Graph**
    *   Start the pose-graph creation process:
 
        ```
-       maurice-sdk pose-graph new pg_name
+       innate pose-graph new pg_name
        ```
 3. **Environment Coverage**
    * Drive Maurice through the environment
@@ -89,19 +89,19 @@ The system continuously updates its environmental understanding through the pose
     *   Save the pose-graph:
 
         ```
-        maurice-sdk pose-graph save pg_name
+        innate pose-graph save pg_name
         ```
     *   View the pose-graph:
 
         ```
-        maurice-sdk pose-graph view pg_name
+        innate pose-graph view pg_name
         ```
     * Load a pose-graph for use:
 
     Note: The `-dynamic` argument controls whether the pose-graph:
 
     ```sh
-     maurice-sdk pose-graph load pg_name --dynamic False
+     innate pose-graph load pg_name --dynamic False
      
      #`True`: Continuously updates with new environmental information
      #`False`: Remains static using only saved information
@@ -115,7 +115,7 @@ The system continuously updates its environmental understanding through the pose
 
 ```python
 
-from maurice_sdk import navigation
+from innate import navigation
 # Initialize navigation module
 navigation.init()
 ```
@@ -160,34 +160,34 @@ navigation.interrupt()
 **Get Current Pose**
 
 ```bash
-maurice-sdk navigation get-current-pose
+innate navigation get-current-pose
 # Returns: x y theta# Example output: 1.5 -0.3 0.785
 ```
 
 **Go to Pose**
 
 ```bash
-maurice-sdk navigation go-to-pose <x> <y> <theta>
-# Parameters:#   x: x coordinate in meters#   y: y coordinate in meters#   theta: orientation in radians# Example: maurice-sdk navigation go-to-pose 1.5 -0.3 0.785
+innate navigation go-to-pose <x> <y> <theta>
+# Parameters:#   x: x coordinate in meters#   y: y coordinate in meters#   theta: orientation in radians# Example: innate navigation go-to-pose 1.5 -0.3 0.785
 ```
 
 **Go to Memory**
 
 ```bash
-maurice-sdk navigation go-to-memory "text prompt"
-# Parameter: text description of saved location# Example: maurice-sdk navigation go-to-memory "kitchen counter"
+innate navigation go-to-memory "text prompt"
+# Parameter: text description of saved location# Example: innate navigation go-to-memory "kitchen counter"
 ```
 
 **Go to In Sight**
 
 ```bash
-maurice-sdk navigation go-to-in-sight "text prompt" <distance>
-# Parameters:#   text prompt: description of visible location/object#   distance: desired distance from object in meters# Example: maurice-sdk navigation go-to-in-sight "blue chair" 0.5
+innate navigation go-to-in-sight "text prompt" <distance>
+# Parameters:#   text prompt: description of visible location/object#   distance: desired distance from object in meters# Example: innate navigation go-to-in-sight "blue chair" 0.5
 ```
 
 **Interrupt Navigation**
 
 ```bash
-maurice-sdk navigation interrupt
+innate navigation interrupt
 # Immediately stops current navigation command
 ```

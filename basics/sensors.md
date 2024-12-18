@@ -51,7 +51,7 @@ Maurice features a comprehensive sensor suite consisting of three primary sensor
 * Scan rate: 5.5Hz
 * Primary sensor for SLAM and navigation
 
-This sensor configuration enables robust environmental perception, precise manipulation, and reliable navigation through complementary sensing modalities. Each sensor's data can be accessed and processed through the Maurice SDK.
+This sensor configuration enables robust environmental perception, precise manipulation, and reliable navigation through complementary sensing modalities. Each sensor's data can be accessed and processed through the Innate SDK.
 
 ***
 
@@ -63,11 +63,11 @@ View live sensor data streams in a visualization window:
 
 ```bash
 # Stream RGBD camera
-maurice-sdk sensor play rgbd
+innate sensor play rgbd
 # Shows color and depth streams in separate windows# Stream gripper camera
-maurice-sdk sensor play gripper
+innate sensor play gripper
 # Shows color stream from gripper camera# Stream LiDAR data
-maurice-sdk sensor play lidar
+innate sensor play lidar
 # Shows 2D scan visualization
 ```
 
@@ -77,18 +77,18 @@ Save sensor data snapshots to file:
 
 ```bash
 # Capture RGBD data
-maurice-sdk sensor capture rgbd
+innate sensor capture rgbd
 # Saves color image as {timestamp}_rgb.png and depth as {timestamp}_depth.png# Capture gripper camera image
-maurice-sdk sensor capture gripper
+innate sensor capture gripper
 # Saves image as {timestamp}_gripper.png# Capture LiDAR scan
-maurice-sdk sensor capture lidar
+innate sensor capture lidar
 # Saves scan data as {timestamp}_scan.txt
 ```
 
 By default, captures are saved in the current working directory. Use the optional `--output` flag to specify a different save location:
 
 ```bash
-maurice-sdk sensor capture rgbd --output /path/to/directory
+innate sensor capture rgbd --output /path/to/directory
 ```
 
 ***
@@ -100,7 +100,7 @@ maurice-sdk sensor capture rgbd --output /path/to/directory
 **Setup**
 
 ```python
-from maurice_sdk import sensors
+from innate import sensors
 sensors.init()
 ```
 

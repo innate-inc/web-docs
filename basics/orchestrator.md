@@ -29,7 +29,7 @@ Builders can customize and extend the Orchestrator's capabilities through Direct
 A Directive consists of two key components:
 
 ```python
-from maurice_sdk.directive import Directive
+from innate.directive import Directive
 from typing import List
 
 class BasicDirective(Directive):
@@ -85,10 +85,10 @@ Use the Maurice SDK CLI commands:
 
 ```bash
 # Activate a directive
-maurice-sdk directive activate directive_name
+innate directive activate directive_name
 
 # Deactivate all directives
-maurice-sdk directive deactivate
+innate directive deactivate
 
 ```
 
@@ -112,9 +112,7 @@ Here's a complete example showing how to build a simple security system using th
 File: `~/primitives/notify_user.py`
 
 ```python
-python
-Copy
-from maurice_sdk.primitive import Primitive
+from innate.primitive import Primitive
 from typing import Tuple
 import smtplib
 from email.message import EmailMessage
@@ -159,10 +157,8 @@ class NotifyUser(Primitive):
 File: `~/primitives/patrol.py`
 
 ```python
-python
-Copy
-from maurice_sdk.primitive import Primitive
-from maurice_sdk import navigation
+from innate.primitive import Primitive
+from innate import navigation
 from typing import Tuple
 import time
 
@@ -199,9 +195,7 @@ class Patrol(Primitive):
 File: `~/directives/security_directive.py`
 
 ```python
-python
-Copy
-from maurice_sdk.directive import Directive
+from innate.directive import Directive
 from typing import List
 
 class SecurityDirective(Directive):
@@ -249,19 +243,14 @@ Safety is the top priority. If anything seems unsafe, notify the user immediatel
    * Put directive in `~/directives/`
 2. Activate the security directive using either:
 
-Or use the Maurice app:
-
-````
-```bash
-bash
-Copy
-maurice-sdk directive activate security_directive
-
+```
+innate directive activate security_directive
 ```
 
-- Navigate to Directives page
-- Click on "security_directive"
-````
+Or use the Maurice app:
+
+* Navigate to the Directives page
+* Click on "security\_directive"
 
 3\. The robot can now handle commands like: - "Check the house" - "Do a security patrol" - "Alert me if anything seems wrong"
 
