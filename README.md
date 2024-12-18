@@ -14,7 +14,7 @@ We are developing **teachable, accessible general-purpose robots** for builders 
 
 We currently offer:
 
-* A small-size, affordable mobile manipulator (with onboard compute and a data collector) called Maurice for $3,000. You can book one here.
+* A small-size, affordable mobile manipulator (with onboard compute and a data collector) called Maurice for $2,000. You can book one [here](https://innate.bot).
 * The Innate SDK to quickly teach your robot new physical, digital tasks, and chain them in your home to perform long-term activities.
 
 
