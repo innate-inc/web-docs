@@ -26,7 +26,7 @@ Then follow the instructions in [maurice-setup.md](../setup/maurice-setup.md "me
 
 You can start coding right after by defining files in `~/primitives` and `~/directives`
 
-### 3. Create Glass Handling Primitives
+### 2. Create Glass Handling Primitives
 
 A primitive is akin to a function call for an LLM. This is what the robot will call when it believes it is in the right circumstances to call. You can add guidelines to tell it more about when to call it, when to interrupt it...
 
@@ -63,7 +63,7 @@ class ServeGlass(Primitive):
         return f"Served glass.", True
 ```
 
-### 3b. (if required) Train the pickup and handover policies
+### 2b. (if required) Train the pickup and handover policies
 
 If the policies "handover\_glass" and "pickup\_glass" were not trained, you have to collect data and send it to us to train and load the policy onto your robot.
 
@@ -80,7 +80,7 @@ Below is how the process looks like once you're in training mode. The SDK will g
 
 <figure><img src="../.gitbook/assets/Teaching Maurice (1).gif" alt="" width="200"><figcaption><p>In training mode, you collect data</p></figcaption></figure>
 
-### 4. Create a Directive
+### 3. Create a Directive
 
 This is what describes the purpose of the robot during its execution. You can switch between directives. Here, the directive makes sure the robot is aware of its physical capabilities to act in the real world.
 
@@ -105,7 +105,7 @@ You have the personality of a bartender.
 robot.set_directive(ServingDirective())
 ```
 
-### 5. Run Your Agent
+### 4. Run Your Agent
 
 First move the robot around a little with the app so that it memorizes the place.&#x20;
 
