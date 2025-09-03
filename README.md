@@ -6,16 +6,13 @@ icon: house
 
 <figure><img src=".gitbook/assets/Twitter banner.png" alt=""><figcaption></figcaption></figure>
 
-Welcome to Innate!
+We are Innate,
 
-We are developing **teachable, accessible general-purpose robots** for builders ranging from software engineers beginning in robotics, to advanced hardcore roboticists. The world of robotics is changing, and with our platforms, you can **quickly begin training your robot and developing applications**!
+We don’t want robots confined to factories or faceless logistics centers. We want robots that live in the world with us—machines you can teach, shape, and improve over time.
+
+Our first robot out now is MARS, the first Personal AI Robot. Powered by its Embodied AI agent BASIC, MARS can reason, memorize and act in the real world. Programmed through code, demonstrations, and prompting.
 
 
-
-We currently offer:
-
-* A small-size, affordable mobile manipulator (with onboard compute and a data collector) called Maurice for $2,000. You can book one [here](https://innate.bot).
-* The Innate SDK to quickly teach your robot new physical, digital tasks, and chain them in your home to perform long-term activities.
 
 
 
