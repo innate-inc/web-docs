@@ -22,8 +22,6 @@ Install the Innate SDL on your workstation, or download the Innate app from your
 pip install innate-sdk 
 ```
 
-Then follow the instructions in [Broken link](broken-reference "mention") and [Broken link](broken-reference "mention").
-
 You can start coding right after by defining files in `~/skills` and `~/behaviors`
 
 ### 2. Train Skill to pick up piece
