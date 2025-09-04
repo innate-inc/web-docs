@@ -110,7 +110,7 @@ class SecurityGuard(Behavior):
 
 New Behaviors are automatically registered. You can run them from the app.
 
-{% embed url="https://youtu.be/vTQm9AXprEo" %}
+{% embed url="https://youtu.be/b7cNKEcER24" %}
 
 ### 5. Share
 
