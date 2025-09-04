@@ -2,7 +2,7 @@
 
 ## Overview
 
-Maurice features a comprehensive sensor suite consisting of three primary sensors:
+Mars features a comprehensive sensor suite consisting of three primary sensors:
 
 #### **Forward-Facing RGBD Camera**
 
@@ -108,7 +108,7 @@ scan = sensors.get_lidar()
 
 ## Custom Sensors
 
-Maurice provides two powered USB 3.0 ports for connecting additional sensors and peripherals.
+Mars provides two powered USB 3.0 ports for connecting additional sensors and peripherals.
 
 **Port Specifications**
 

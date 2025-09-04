@@ -10,7 +10,7 @@ We are Innate,
 
 We don’t want robots confined to factories or faceless logistics centers. We want robots that live in the world with us—machines you can teach, shape, and improve over time.
 
-Our first robot out now is MARS, the first Personal AI Robot. Powered by its Embodied AI agent BASIC, MARS can reason, memorize and act in the real world. Programmed through code, demonstrations, and prompting.
+Our first robot out now is Mars, the first Personal AI Robot. Powered by its Embodied AI agent BASIC, Mars can reason, memorize and act in the real world. Programmed through code, demonstrations, and prompting.
 
 <figure><img src=".gitbook/assets/WhatsApp Image 2025-08-25 at 18.31.11_acd6a54f.jpg" alt=""><figcaption></figcaption></figure>
 

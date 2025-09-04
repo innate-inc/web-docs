@@ -6,7 +6,7 @@ icon: golang
 
 Mars and BASIC introduce a new paradigm in programming robots through code, demonstrations and language.
 
-BASIC functions through Skills and Behaviors. Skills are atomic capabilities built for MARS. These can be digital like send emails, or physical like pick up socks, navigate to room. Skills can be written as pure code using the sdk, trained policies for manipulation and navigation or both.
+BASIC functions through Skills and Behaviors. Skills are atomic capabilities built for Mars. These can be digital like send emails, or physical like pick up socks, navigate to room. Skills can be written as pure code using the sdk, trained policies for manipulation and navigation or both.
 
 Behaviors give BASIC the ability to compose atomic skills and perform complex long horizon task wrapping together its skills with reasoning, memory and decision making capabilities
 
