@@ -17,3 +17,4 @@
 * [Sensors](mars/sensors.md)
 * [Manipulation](mars/manipulation.md)
 * [Navigation](mars/navigation.md)
+* [Hardware](mars/hardware.md)
