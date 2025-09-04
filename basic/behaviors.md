@@ -4,6 +4,11 @@ Behaviors steer BASIC to perform complex long horizon tasks. Behaviors define th
 
 ## Defining Behaviors
 
+Defining a Behavior requires two components.
+
+1. List of [skills.md](skills.md "mention") that [Broken link](broken-reference "mention") has access to
+2. A natural language prompt that instructs BASIC how to perform the task
+
 ```python
 from innate.behavior import Behavior
 from typing import List
