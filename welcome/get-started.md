@@ -120,4 +120,8 @@ New Behaviors are automatically registered. You can run them from the app.
 
 \[3 D Printer Video]
 
+### 5. Share
+
+Behaviors and Skills are shareable working across robots. Show the word what you've built.
+
 **Mars is designed for builders who want to push the boundaries of what's possible. Whether you're building a 3D printing assistant  or something entirely new, we can't wait to see what you'll create.**
