@@ -10,9 +10,9 @@ BASIC functions through Skills and Behaviors. Skills are atomic capabilities bui
 
 Behaviors give BASIC the ability to compose atomic skills and perform complex long horizon task wrapping together its skills with reasoning, memory and decision making capabilities
 
-### Example: 3d Printing Assistant
+### Example: Security Robot
 
-This is a quick walk through of how MARS can be programmed to clear your 3d printer
+This is a quick walk through of how Mars can be programmed to patrol a house and send alerts over email
 
 ### 1. Installation
 
@@ -24,11 +24,9 @@ pip install innate-sdk
 
 You can start coding right after by defining files in `~/skills` and `~/behaviors`
 
-### 2. Train Skill to pick up piece
+### 2. Train Skill to Open Doors
 
 This is best done through the app, collect a new dataset of demonstrations, choose your parameters and train on our servers
-
-\[Picture of robot next to 3d printer] \[Screen shots from the app]
 
 ### 3. Email Skill
 
@@ -93,22 +91,18 @@ class SendEmail(Skill):
 This is what describes the purpose of the robot during its execution. Define through prompting what the robot should do in different situations, add its relevant skills.
 
 ```python
-class Clear3DPrinterBehavior(Behavior):
-    """Handles completion of 3D prints by picking up the piece and sending a notification email."""
-
+class SecurityGuard(Behavior):
     def name(self) -> str:
-        return "clear_3d_printer_directive"
+        return "security_guard_behavior"
 
     def get_skills(self) -> List[str]:
-        return [
-            "pick_piece", "send_email"
-        ]
+        return ["navigate", "open_door", "send_email"]
 
     def get_prompt(self) -> str:
-        return """You are a robot responsible for clearing the 3D printer after a print job finishes. 
-When a print is complete, carefully pick up the finished piece from the printer bed and then 
-send an email notification to inform that the print has been completed. 
-Be precise and gentle when handling the piece, and ensure the notification is clear and concise."""
+        return """You are a security guard robot. Patrol the house, 
+        stay alert and professional, watch for intruders, open doors
+         when needed, and send an email immediately if you find one."""
+
 
 ```
 
@@ -116,9 +110,7 @@ Be precise and gentle when handling the piece, and ensure the notification is cl
 
 New Behaviors are automatically registered. You can run them from the app.
 
-
-
-\[3 D Printer Video]
+{% embed url="https://youtu.be/vTQm9AXprEo" %}
 
 ### 5. Share
 
