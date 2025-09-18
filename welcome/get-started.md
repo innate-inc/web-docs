@@ -114,14 +114,18 @@ class SecurityGuard(Behavior):
 
 ```
 
-### 4. Run The Behavior
+### 5. Run The Behavior
 
 New Behaviors are automatically registered. You can run them from the app.
 
 {% embed url="https://youtu.be/b7cNKEcER24" %}
 
-### 5. Share
+### 6. Share
 
-Behaviors and Skills are shareable working across robots. Show the word what you've built.
+Behaviors and Skills are shareable working across robots.&#x20;
+
+You can simply share the files in a github repository like our [examples repository](https://app.gitbook.com/u/zOCxacgyelY4F6REjthFZpRxvMC2).
+
+
 
 **Mars is designed for builders who want to push the boundaries of what's possible. Whether you're building a 3D printing assistant  or something entirely new, we can't wait to see what you'll create.**
