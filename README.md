@@ -25,6 +25,10 @@ Our systems are developed with a few principles in mind:
 
 
 
+***
+
+
+
 
 
 {% columns fullWidth="true" %}
@@ -33,7 +37,7 @@ Our systems are developed with a few principles in mind:
 
 <figure><img src=".gitbook/assets/isometric_crop.png" alt="" width="188"><figcaption></figcaption></figure>
 
-MARS, Innate's first robot, is a portable mobile manipulator under $2k capable of running embodied agents and VLAs.
+MARS, Innate's first robot, is a portable mobile manipulator **under $2k** capable of running embodied agents and VLAs.
 
 Perfect for developers & hobbyists looking to build on the state of the art of AI
 
@@ -61,7 +65,11 @@ Run your first behavior in minutes, learn how to make complex behaviors with VLA
 
 
 
+
+
 <p align="center"><strong>Any question that this documentation cannot answer ?</strong></p>
 
 <p align="center"><a href="https://discord.com/invite/KtkyT97kc7"><img src="https://i0.wp.com/nikke.gg/wp-content/uploads/join-us-discord.png?fit=728%2C200&#x26;ssl=1" alt="Join our Discord server"></a></p>
+
+
 

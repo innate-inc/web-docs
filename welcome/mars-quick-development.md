@@ -16,8 +16,10 @@ Now that you know the basics, you can create your first behavior for Mars using 
 Now, on your PC, ssh in the robot with&#x20;
 
 ```bash
-ssh jetson1@<YOU-IP>
+ssh jetson1@<YOUR-ROBOT-IP>
 ```
+
+
 
 
 
@@ -97,7 +99,7 @@ Below, an example of training the arm to pick up a cherry.
 
 
 
-**VIDEO**
+{% embed url="https://youtu.be/dr1TuHpc_94" %}
 
 
 
