@@ -4,17 +4,64 @@ icon: house
 
 # Home
 
-<figure><img src=".gitbook/assets/1.png" alt=""><figcaption></figcaption></figure>
+<div data-full-width="true"><figure><img src=".gitbook/assets/Group 1321323070.png" alt=""><figcaption></figcaption></figure></div>
 
-We are Innate,
 
-We don’t want robots confined to factories or faceless logistics centers. We want robots that live in the world with us—machines you can teach, shape, and improve over time.
 
-Our first robot out now is Mars, the first Personal AI Robot. Powered by its Embodied AI agent BASIC, Mars can reason, memorize and act in the real world. Programmed through code, demonstrations, and prompting.
+At Innate, we make **affordable & intuitive AI robots** that you can teach and program.
 
-<figure><img src=".gitbook/assets/WhatsApp Image 2025-08-25 at 18.31.11_acd6a54f.jpg" alt=""><figcaption></figcaption></figure>
+Our whole stack, from the hardware to the software, is designed to run the state-of-the-art of AI in embodied agents and manipulation models.
 
-Follow us on Discord! \
-We'll be posting more frequent updates and organize events there.
 
-[![Join our Discord server](https://i0.wp.com/nikke.gg/wp-content/uploads/join-us-discord.png?fit=728%2C200\&ssl=1)](https://discord.com/invite/KtkyT97kc7)
+
+This documentation describes our robots, our open operating system BASIC, how to develop with it, and examples of what you can do with them.
+
+
+
+Our systems are developed with a few principles in mind:
+
+* Users should be able to quickly run programs developed for our robots.
+* Developers should have access to a complete powerful stack.
+
+
+
+
+
+{% columns fullWidth="true" %}
+{% column width="50%" %}
+## Robots
+
+<figure><img src=".gitbook/assets/isometric_crop.png" alt="" width="188"><figcaption></figcaption></figure>
+
+MARS, Innate's first robot, is a portable mobile manipulator under $2k capable of running embodied agents and VLAs.
+
+Perfect for developers & hobbyists looking to build on the state of the art of AI
+
+{% content-ref url="robots/mars/" %}
+[mars](robots/mars/)
+{% endcontent-ref %}
+{% endcolumn %}
+
+{% column width="50%" %}
+## Innate OS & BASIC
+
+How to develop and train your robot running the Innate OS and its brain BASIC.
+
+Run your first behavior in minutes, learn how to make complex behaviors with VLAs, and share your behaviors with others.
+
+{% content-ref url="https://app.gitbook.com/o/o3IF72l1dHMzKuzxuc3w/s/jNuwD0ZkQTuQny1CgVLF/" %}
+[docs.innate.bot](https://app.gitbook.com/o/o3IF72l1dHMzKuzxuc3w/s/jNuwD0ZkQTuQny1CgVLF/)
+{% endcontent-ref %}
+
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
+{% endcolumn %}
+{% endcolumns %}
+
+
+
+<p align="center"><strong>Any question that this documentation cannot answer ?</strong></p>
+
+<p align="center"><a href="https://discord.com/invite/KtkyT97kc7"><img src="https://i0.wp.com/nikke.gg/wp-content/uploads/join-us-discord.png?fit=728%2C200&#x26;ssl=1" alt="Join our Discord server"></a></p>
+

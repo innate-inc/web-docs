@@ -3,7 +3,20 @@
 ## Welcome
 
 * [Home](README.md)
-* [Get started](welcome/get-started.md)
+* [MARS Quick Start](welcome/mars-quick-start.md)
+* [MARS Quick Development](welcome/mars-quick-development.md)
+* [MARS Example use-cases](welcome/mars-example-use-cases.md)
+
+## Robots
+
+* [MARS](robots/mars/README.md)
+  * [Overview](robots/mars/overview.md)
+  * [Sensors](robots/mars/sensors.md)
+  * [Control via app](robots/mars/control-via-app.md)
+  * [Extending MARS](robots/mars/extending-mars.md)
+* [Manipulation](robots/manipulation.md)
+* [Navigation](robots/navigation.md)
+* [Hardware](robots/hardware.md)
 
 ## BASIC
 
@@ -11,11 +24,3 @@
 * [Skills](basic/skills.md)
 * [Behaviors](basic/behaviors.md)
 * [Simulation](basic/simulation.md)
-
-## Mars
-
-* [Setup](mars/setup.md)
-* [Sensors](mars/sensors.md)
-* [Manipulation](mars/manipulation.md)
-* [Navigation](mars/navigation.md)
-* [Hardware](mars/hardware.md)
