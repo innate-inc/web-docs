@@ -14,7 +14,7 @@ Our whole stack, from the hardware to the software, is designed to run the state
 
 
 
-This documentation describes our robots, our open operating system BASIC, how to develop with it, and examples of what you can do with them.
+This documentation describes our robots, our open operating system, how to develop with it, and examples of what you can do with them.
 
 
 
@@ -22,6 +22,7 @@ Our systems are developed with a few principles in mind:
 
 * Users should be able to quickly run programs developed for our robots.
 * Developers should have access to a complete powerful stack.
+* The robots should be robust, reliable and precise to execute AI algorithms.
 
 
 

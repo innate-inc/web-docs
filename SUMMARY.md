@@ -6,12 +6,13 @@
 * [MARS Quick Start](welcome/mars-quick-start.md)
 * [MARS Quick Development](welcome/mars-quick-development.md)
 * [MARS Example use-cases](welcome/mars-example-use-cases.md)
+* [Frequently Asked Questions](welcome/frequently-asked-questions.md)
 
 ## Robots
 
 * [MARS](robots/mars/README.md)
-  * [Overview](robots/mars/overview.md)
   * [Sensors](robots/mars/sensors.md)
+  * [Arm](robots/mars/arm.md)
   * [Onboard computer](robots/mars/onboard-computer.md)
   * [Control via app & leader arm](robots/mars/control-via-app-and-leader-arm.md)
   * [Extending MARS](robots/mars/extending-mars.md)
