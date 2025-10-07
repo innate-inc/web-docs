@@ -71,8 +71,8 @@ Save the file, then restart the robot (unplug and plug again), open the app and 
 
 To dive more in the details of how to develop behaviors:
 
-{% content-ref url="../basic/behaviors.md" %}
-[behaviors.md](../basic/behaviors.md)
+{% content-ref url="../software/behaviors.md" %}
+[behaviors.md](../software/behaviors.md)
 {% endcontent-ref %}
 
 
@@ -193,7 +193,7 @@ Below is the result of running it:
 
 To learn more about the Skills SDK:
 
-{% content-ref url="../basic/skills.md" %}
-[skills.md](../basic/skills.md)
+{% content-ref url="../software/skills/" %}
+[skills](../software/skills/)
 {% endcontent-ref %}
 

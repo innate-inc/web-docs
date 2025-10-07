@@ -6,7 +6,7 @@ Behaviors steer BASIC to perform complex long horizon tasks. Behaviors define th
 
 Defining a Behavior requires two components.
 
-1. List of [skills.md](skills.md "mention") that [Broken link](broken-reference "mention") has access to
+1. List of [skills](skills/ "mention") that [Broken link](broken-reference "mention") has access to
 2. A natural language prompt that instructs BASIC how to perform the task
 
 ```python
