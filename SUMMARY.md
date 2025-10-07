@@ -12,11 +12,13 @@
 * [MARS](robots/mars/README.md)
   * [Overview](robots/mars/overview.md)
   * [Sensors](robots/mars/sensors.md)
-  * [Control via app](robots/mars/control-via-app.md)
+  * [Onboard computer](robots/mars/onboard-computer.md)
+  * [Control via app & leader arm](robots/mars/control-via-app-and-leader-arm.md)
   * [Extending MARS](robots/mars/extending-mars.md)
-* [Manipulation](robots/manipulation.md)
-* [Navigation](robots/navigation.md)
-* [Hardware](robots/hardware.md)
+  * [Manipulation](robots/mars/manipulation.md)
+  * [Navigation](robots/mars/navigation.md)
+* [Innate Controller App](robots/innate-controller-app/README.md)
+  * [Connecting to a robot](robots/innate-controller-app/connecting-to-a-robot.md)
 
 ## BASIC
 

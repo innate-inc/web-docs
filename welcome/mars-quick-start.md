@@ -29,7 +29,7 @@ MARS turns on automatically when plugging the battery in. Put it on the floor, p
 
 
 
-The app is available <i class="fa-google-play">:google-play:</i> [here for android](https://innate.bot/) and <i class="fa-app-store-ios">:app-store-ios:</i> [here for ios](https://innate.bot/).
+The app is available <i class="fa-google-play">:google-play:</i> [here for android](https://innate.bot/android_app) and <i class="fa-app-store-ios">:app-store-ios:</i> [here for ios](https://innate.bot/ios_app).
 
 
 

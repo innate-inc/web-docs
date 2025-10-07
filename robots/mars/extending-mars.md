@@ -12,7 +12,7 @@ We describe below how we recommend to extend MARS on the hardware side.
 
 
 
-## Changing the end-effector
+## <i class="fa-hand">:hand:</i> Changing the end-effector
 
 The end effector by default is a gripper (opposable thumbs).
 
@@ -22,26 +22,26 @@ Examples of two different types of end effectors we used without changing the co
 
 {% columns %}
 {% column %}
-**TBD**
+<figure><img src="../../.gitbook/assets/1319_recol.png" alt=""><figcaption><p>MARS v1 gripper</p></figcaption></figure>
 
-**New end effector of v1**
+
 {% endcolumn %}
 
 {% column %}
-**TBD**
+<figure><img src="../../.gitbook/assets/1320_recol.png" alt=""><figcaption><p>A gripper with just one side moving</p></figcaption></figure>
 
-**Old effector of v0.9**
+
 {% endcolumn %}
 {% endcolumns %}
 
 
 
-## Adding sensors and effectors on the USB and GPIOs
+## <i class="fa-sensor">:sensor:</i> Adding sensors and effectors on the USB and GPIOs
 
 We leave it to the user to integrate any additional sensors they want on the ports available. For any added device, users should make sure they install it properly on the robot. You can then feed the data in the BASIC OS by creating a Sensor object in the SDK (to be revealed...)
 
 Some sensors we have already tried and work plug-and-play on MARS:
 
-* TONOR directional microphone ([$29 on Amazon](https://www.amazon.com/dp/B0CSCT63BL?ref=fed_asin_title)) - Plug it in and use the TONORMicrophoneInput (to be revealed...) to make MARS able to listen to you in real time.
-* _To be continued..._
+* <i class="fa-microphone-lines">:microphone-lines:</i> TONOR directional microphone ([$29 on Amazon](https://www.amazon.com/dp/B0CSCT63BL?ref=fed_asin_title)) - Plug it in and use the TONORMicrophoneInput (to be revealed...) to make MARS able to listen to you in real time.
+* <i class="fa-smog">:smog:</i>  Blackiot [Polverine Air Quality Sensor](https://blackiot.swiss/polverine).
 
