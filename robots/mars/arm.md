@@ -4,7 +4,7 @@
 
 * Reach: 40cm
 * Repeatability: 2mm
-* Payload: 250mg at maximum extension
+* Payload: 250g at maximum extension
 
 ### Actuators
 
