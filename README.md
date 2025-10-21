@@ -54,10 +54,6 @@ How to develop and train your robot running the Innate OS and its brain BASIC.
 
 Run your first behavior in minutes, learn how to make complex behaviors with VLAs, and share your behaviors with others.
 
-{% content-ref url="https://app.gitbook.com/o/o3IF72l1dHMzKuzxuc3w/s/jNuwD0ZkQTuQny1CgVLF/" %}
-[docs.innate.bot](https://app.gitbook.com/o/o3IF72l1dHMzKuzxuc3w/s/jNuwD0ZkQTuQny1CgVLF/)
-{% endcontent-ref %}
-
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)
 {% endcontent-ref %}

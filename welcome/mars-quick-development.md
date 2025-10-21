@@ -71,8 +71,8 @@ Save the file, then restart the robot (unplug and plug again), open the app and 
 
 To dive more in the details of how to develop behaviors:
 
-{% content-ref url="../software/behaviors.md" %}
-[behaviors.md](../software/behaviors.md)
+{% content-ref url="../software/behaviors/" %}
+[behaviors](../software/behaviors/)
 {% endcontent-ref %}
 
 

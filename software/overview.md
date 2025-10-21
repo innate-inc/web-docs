@@ -44,7 +44,7 @@ class HelloWorld(Behavior):
 
 This will start the robot and make it say hello world on the speakers once.
 
-See more in [behaviors.md](behaviors.md "mention")
+See more in [behaviors](behaviors/ "mention")
 
 
 
