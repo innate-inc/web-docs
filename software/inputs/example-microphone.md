@@ -17,3 +17,8 @@ def get_inputs(self) -> List[str]:
 
 The code for this input device is available in our open-source repositories at TBD.
 
+
+
+#### How it looks like
+
+{% embed url="https://youtu.be/Da_vpacFfvM" %}

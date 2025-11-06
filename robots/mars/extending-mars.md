@@ -45,3 +45,10 @@ Some sensors we have already tried and work plug-and-play on MARS:
 * <i class="fa-microphone-lines">:microphone-lines:</i> TONOR directional microphone ([$29 on Amazon](https://www.amazon.com/dp/B0CSCT63BL?ref=fed_asin_title)) - Plug it in and use the TONORMicrophoneInput (to be revealed...) to make MARS able to listen to you in real time.
 * <i class="fa-smog">:smog:</i>  Blackiot [Polverine Air Quality Sensor](https://blackiot.swiss/polverine).
 
+
+
+#### Example: Adding a microphone
+
+By simply plugging a microphone in the robot and following the [example-microphone.md](../../software/inputs/example-microphone.md "mention") guide, you can now talk directly with your MARS, including when it's moving around and doing tasks.
+
+{% embed url="https://youtu.be/Da_vpacFfvM" %}
