@@ -8,7 +8,7 @@ icon: mobile
 Note that we are still in beta for both version, please reach out on Discord to get access.
 {% endhint %}
 
-The app is available <i class="fa-google-play">:google-play:</i> [here for android](https://innate.bot/android_app) and <i class="fa-app-store-ios">:app-store-ios:</i> [here for ios](https://innate.bot/ios_app).
+The latest version of the app is available <i class="fa-google-play">:google-play:</i> [here for android](https://cdn.innate.bot/innate-app-latest.apk) and <i class="fa-app-store-ios">:app-store-ios:</i> [here for ios](https://innate.bot/ios_app).
 
 
 
