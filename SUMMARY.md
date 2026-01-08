@@ -20,8 +20,9 @@
   * [Navigation](robots/mars/navigation.md)
   * [Updating MARS](robots/mars/updating-mars.md)
   * [Connecting via SSH](robots/mars/connecting-via-ssh.md)
-  * [Troubleshooting](robots/mars/troubleshooting.md)
   * [Charging the Battery](robots/mars/charging-battery.md)
+  * [Troubleshooting](robots/mars/troubleshooting.md)
+    * [Critical Fix (Before Jan 16)](robots/mars/critical-fix-before-jan-16.md)
 * [Innate Controller App](robots/innate-controller-app/README.md)
   * [Connecting to a robot](robots/innate-controller-app/connecting-to-a-robot.md)
 
