@@ -53,26 +53,26 @@ On your phone, create a Wi-Fi hotspot with the following credentials:
 
 Power on your MARS robot by plugging in the battery. Wait for the LiDAR to start spinning and for the startup sound.
 
-The robot will automatically detect and connect to the `innate` hotspot.
+The robot will automatically detect and connect to the `FBI_VAN_6` hotspot.
 
 ---
 
 ## Step 3: Get the robot's IP address via Bluetooth
 
 1. Open the Innate app on your phone
-2. Go to the **Bluetooth connections** screen
-3. You should see your robot listed
+2. On the Connection screen, you should see your robot available in the list under "Bluetooth" connections (or refresh until you do).
+3. Top on it and just stay on the next screen.
 4. Note the **IP address** shown for your robot (it could be something like `172.20.10.x` but depends on your phone)
 
 {% hint style="info" %}
-You should not fully connect to the robot through the app. Just connect via Bluetooth to see the IP address on the wifi. 
+You should not fully connect to the robot via wifi once you reach that screen. Just stay there where it gives you wifi information and proceed to the update below.
 {% endhint %}
 
 ---
 
 ## Step 4: Connect your computer to the hotspot
 
-Connect your computer to the same `innate` Wi-Fi hotspot that you created. This puts your computer on the same network as the robot.
+Connect your computer to the same `FBI_VAN_6` Wi-Fi hotspot that you created. This puts your computer on the same network as the robot.
 
 ---
 
