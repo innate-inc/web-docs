@@ -18,6 +18,7 @@
   * [Extending MARS](robots/mars/extending-mars.md)
   * [Manipulation](robots/mars/manipulation.md)
   * [Navigation](robots/mars/navigation.md)
+  * [Updating MARS](robots/mars/updating-mars.md)
 * [Innate Controller App](robots/innate-controller-app/README.md)
   * [Connecting to a robot](robots/innate-controller-app/connecting-to-a-robot.md)
 
