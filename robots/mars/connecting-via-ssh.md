@@ -2,6 +2,11 @@
 
 This page explains how to connect to your MARS robot via SSH.
 
+The default credentials are:
+
+- **Username:** `jetson1`
+- **Password:** `goodbot`
+
 ---
 
 ## Via WiFi
@@ -9,7 +14,7 @@ This page explains how to connect to your MARS robot via SSH.
 If your robot is connected to the same network as your computer, you can SSH into it using its hostname or IP address:
 
 ```bash
-ssh innate@<robot-hostname-or-ip>
+ssh jetson1@<robot-hostname-or-ip>
 ```
 
 ---
@@ -23,7 +28,7 @@ If WiFi is unavailable or unreliable, you can connect directly to the Jetson's U
 3. SSH into the robot:
 
 ```bash
-ssh innate@192.168.55.1
+ssh jetson1@192.168.55.1
 ```
 
 This method is useful when:
