@@ -42,9 +42,80 @@ ssh jetson1@mars.local
 
 ---
 
-## Via USB-C (Jetson)
+## Via Ethernet (Preferred Wired Method)
 
-If WiFi is unavailable or unreliable, you can connect directly to the Jetson's USB-C port.
+If you need a reliable wired connection, **Ethernet is the recommended approach**. Connect an Ethernet cable between your computer and the robot.
+
+Once connected, SSH into the robot:
+
+```bash
+ssh jetson1@192.168.50.2
+```
+
+### Configuring your computer's Ethernet
+
+You need to set a static IP on your computer's Ethernet interface. Choose your operating system:
+
+{% tabs %}
+{% tab title="Windows" %}
+**Windows 10 / 11**
+
+1. Right-click **Start** → Select **Network Connections**
+2. Click **Advanced network settings** → **More network adapter options**
+3. Right-click **Ethernet** → Select **Properties**
+4. Double-click **Internet Protocol Version 4 (IPv4)**
+5. Select **Use the following IP address** and fill in:
+   - **IP address:** `192.168.50.1`
+   - **Subnet mask:** `255.255.255.0`
+   - **Default gateway:** (leave blank)
+   - **DNS:** (leave empty)
+6. Click **OK** → **Close**
+{% endtab %}
+
+{% tab title="macOS" %}
+**macOS (Ventura / Sonoma)**
+
+1. Open **System Settings** → **Network** → Select **Ethernet**
+   - If missing: click **+** → **Ethernet**
+2. Click **Details** → **TCP/IP**
+3. Set:
+   - **Configure IPv4:** Manually
+   - **IP Address:** `192.168.50.1`
+   - **Subnet Mask:** `255.255.255.0`
+   - **Router:** (leave blank)
+4. Click **OK**
+5. *(Optional)* Go to **Details** → **DNS** and remove any DNS servers to prevent Ethernet from affecting your internet connection
+{% endtab %}
+
+{% tab title="Ubuntu" %}
+**Ubuntu (GNOME)**
+
+1. Click the top-right system menu → **Wired** → **Wired Settings**
+   - Or: **Settings** → **Network** → **Wired**
+2. Click the ⚙️ gear icon next to **Wired**
+3. Go to the **IPv4** tab and set:
+   - **Method:** Manual
+   - **Address:** `192.168.50.1`
+   - **Netmask:** `255.255.255.0`
+   - **Gateway:** (leave empty)
+   - **DNS:** (leave empty)
+4. Click **Apply**
+5. Toggle **Wired** OFF → ON to apply changes
+{% endtab %}
+{% endtabs %}
+
+---
+
+## Via USB-C (Last Resort)
+
+{% hint style="warning" %}
+**USB-C connection is not recommended.** You need to unplug an internal cable to use this method. Only use this as a last resort when WiFi and Ethernet are not available.
+{% endhint %}
+
+<details>
+<summary>Show USB-C connection instructions</summary>
+
+If WiFi and Ethernet are unavailable, you can connect directly to the Jetson's USB-C port.
 
 1. Connect a USB-C cable between your computer and the Jetson's USB-C port on MARS.
 2. The Jetson exposes a network interface over USB-C at a fixed IP address.
@@ -56,6 +127,8 @@ ssh jetson1@192.168.55.1
 
 This method is useful when:
 
-- The robot is not yet configured for WiFi.
-- You're debugging network issues.
-- You need a direct, reliable connection.
+- The robot is not yet configured for WiFi
+- Ethernet is not available
+- You're debugging network issues as a last resort
+
+</details>
