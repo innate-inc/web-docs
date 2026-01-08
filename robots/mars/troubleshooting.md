@@ -1,0 +1,56 @@
+# Troubleshooting
+
+This page explains how to diagnose issues on your MARS robot by inspecting the running processes.
+
+---
+
+## Connect via SSH
+
+First, [SSH into your robot](connecting-via-ssh.md).
+
+---
+
+## Access the OS tmux session
+
+MARS runs its software stack inside a `tmux` session. To attach to it:
+
+```bash
+tmux attach
+```
+
+If there are multiple sessions, you can list them with `tmux ls` and attach to the correct one.
+
+---
+
+## Navigate tmux to find issues
+
+:::note
+This section is for advanced users familiar with ROS2. If you're not comfortable with ROS, simply reach out to us on [Discord](https://discord.com/invite/KtkyT97kc7) and we'll help you diagnose the issue.
+:::
+
+Once inside the tmux session, you'll see multiple windows or panes, each running a different ROS2 node or process.
+
+### Basic tmux navigation
+
+- **Switch windows:** `Ctrl+b` then `n` (next) or `p` (previous)
+- **List windows:** `Ctrl+b` then `w`
+- **Switch panes:** `Ctrl+b` then arrow keys
+- **Scroll up:** `Ctrl+b` then `[`, then use arrow keys or Page Up/Down. Press `q` to exit scroll mode.
+
+### Finding a problematic node
+
+1. Cycle through the windows and panes to see which processes are running.
+2. Look for error messages, stack traces, or nodes that have crashed or are restarting.
+3. Use scroll mode to review recent output and identify what went wrong.
+
+---
+
+## Contact us
+
+When you identify an issue, please reach out to us on [Discord](https://discord.com/invite/KtkyT97kc7) with:
+
+- The name of the node or process that is failing
+- Any error messages or stack traces you see
+- What you were doing when the issue occurred
+
+We'll help you resolve it as quickly as possible.
