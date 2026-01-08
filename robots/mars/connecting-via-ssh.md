@@ -11,10 +11,33 @@ The default credentials are:
 
 ## Via WiFi
 
-If your robot is connected to the same network as your computer, you can SSH into it using its hostname or IP address:
+If your robot is connected to the same network as your computer, you can SSH into it using its hostname:
 
 ```bash
-ssh jetson1@<robot-hostname-or-ip>
+ssh jetson1@<robot-name>.local
+```
+
+### Finding your robot's hostname
+
+The hostname is based on **your robot's name** (the one you set in the app). The name is automatically converted to a valid hostname:
+
+- Letters become lowercase
+- Spaces and special characters become hyphens (`-`)
+- Multiple hyphens are collapsed into one
+- Leading/trailing hyphens are removed
+
+**Examples:**
+
+| Robot Name | Hostname | SSH Command |
+|------------|----------|-------------|
+| `My Robot` | `my-robot.local` | `ssh jetson1@my-robot.local` |
+| `MARS_01` | `mars-01.local` | `ssh jetson1@mars-01.local` |
+| `Test Bot` | `test-bot.local` | `ssh jetson1@test-bot.local` |
+
+If you haven't named your robot, the default hostname is `mars.local`:
+
+```bash
+ssh jetson1@mars.local
 ```
 
 ---
