@@ -1,8 +1,8 @@
 # Critical Fix for Robots Received Before January 16
 
-:::warning
+{% hint style="warning" %}
 **This guide is only for robots received before January 16, 2025.** If you received your robot after this date, this fix has already been applied and you can skip this page.
-:::
+{% endhint %}
 
 Robots shipped before January 16 require a critical update before normal operation. This update must be applied via a Wi-Fi hotspot connection before using the standard app-based setup.
 
@@ -64,9 +64,9 @@ The robot will automatically detect and connect to the `innate` hotspot.
 3. You should see your robot listed
 4. Note the **IP address** shown for your robot (it could be something like `172.20.10.x` but depends on your phone)
 
-:::note
+{% hint style="info" %}
 You should not fully connect to the robot through the app. Just connect via Bluetooth to see the IP address on the wifi. 
-:::
+{% endhint %}
 
 ---
 
