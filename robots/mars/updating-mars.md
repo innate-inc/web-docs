@@ -14,7 +14,7 @@ All of this is handled for you by `innate-update`.
 
 ## Prerequisites
 
-- You can **SSH into your robot**.
+- You can **SSH into your robot**. If WiFi isn't available, you can also [connect via the Jetson USB-C port](connecting-via-ssh.md#via-usb-c-jetson).
 - The `innate-update` command is available on the robot.
 - The robot has **internet access**.
 
