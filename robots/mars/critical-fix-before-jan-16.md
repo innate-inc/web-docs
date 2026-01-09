@@ -1,16 +1,16 @@
-# Critical Fix for Robots Received Before January 16
+# Critical Fix for MARS IDs 1-11
 
 {% hint style="warning" %}
-**This guide is only for robots received before January 16, 2025.** If you received your robot after this date, this fix has already been applied and you can skip this page.
+**This guide is only for [MARS IDs](faq.md#how-do-i-find-my-mars-id) 1-11** (received before January 16, 2026). If your [MARS ID](faq.md#how-do-i-find-my-mars-id) is 12 or higher, this fix has already been applied and you can skip this page.
 {% endhint %}
 
-Robots shipped before January 16 require a critical update before normal operation. This update must be applied via a Wi-Fi hotspot connection before using the standard app-based setup.
+MARS units with IDs 1-11 (shipped before January 16, 2026) require a critical update before normal operation. This update must be applied via a Wi-Fi hotspot connection before using the standard app-based setup.
 
 ---
 
 ## Overview
 
-The standard setup flow requires your robot to connect to your home Wi-Fi through the app. However, robots received before January 16 have a bug that prevents this from working correctly until a fix is applied.
+The standard setup flow requires your robot to connect to your home Wi-Fi through the app. However, MARS units with IDs 1-11 have a bug that prevents this from working correctly until a fix is applied.
 
 To work around this, you will:
 
