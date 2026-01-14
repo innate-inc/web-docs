@@ -46,4 +46,6 @@
   * [Example: Microphone](software/inputs/example-microphone.md)
 * [BASIC](software/basic/README.md)
   * [Connecting to BASIC](software/basic/connecting-to-basic.md)
-* [ROS2 core](software/ros2-core.md)
+* [ROS2 Core](software/ros2-core.md)
+* [Advanced](software/advanced/README.md)
+  * [ROS2 Reference](software/advanced/ros2-reference.md)
