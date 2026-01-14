@@ -4,43 +4,67 @@ icon: house
 
 # Home
 
-<div data-full-width="true"><figure><img src=".gitbook/assets/Group 1321323070.png" alt=""><figcaption></figcaption></figure></div>
-
-
+<figure><img src=".gitbook/assets/Group 1321323070.png" alt=""><figcaption></figcaption></figure>
 
 At Innate, we make **affordable & intuitive AI robots** that you can teach and program.
 
-Our whole stack, from the hardware to the software, is designed to run the state-of-the-art of AI in embodied agents and manipulation models.
+---
 
+## Get Started
 
+Start building with MARS.
 
-This documentation describes our robots, our open operating system, how to develop with it, and examples of what you can do with them.
+{% tabs %}
+{% tab title="Quick Start" %}
+<figure><img src=".gitbook/assets/placeholder-quickstart.png" alt="" width="300"><figcaption></figcaption></figure>
 
+**Get your robot up and running**
 
+Connect your MARS, control it with the app, and run your first pre-built agent.
 
-Our systems are developed with a few principles in mind:
+{% content-ref url="welcome/mars-quick-start.md" %}
+[mars-quick-start.md](welcome/mars-quick-start.md)
+{% endcontent-ref %}
+{% endtab %}
 
-* Users should be able to quickly run programs developed for our robots.
-* Developers should have access to a complete powerful stack.
-* The robots should be robust, reliable and precise to execute AI algorithms.
+{% tab title="Build an Agent" %}
+<figure><img src=".gitbook/assets/placeholder-agent.png" alt="" width="300"><figcaption></figcaption></figure>
 
+**Create your first robot app**
 
+Write an agent with skills and prompts — make your robot do something new.
 
-***
+{% content-ref url="welcome/mars-quick-development.md" %}
+[mars-quick-development.md](welcome/mars-quick-development.md)
+{% endcontent-ref %}
+{% endtab %}
 
+{% tab title="See Examples" %}
+<figure><img src=".gitbook/assets/placeholder-examples.png" alt="" width="300"><figcaption></figcaption></figure>
 
+**Watch MARS in action**
 
+Security patrol, sock cleaning, chess playing, and more real-world demos.
 
+{% content-ref url="welcome/mars-example-use-cases.md" %}
+[mars-example-use-cases.md](welcome/mars-example-use-cases.md)
+{% endcontent-ref %}
+{% endtab %}
+{% endtabs %}
 
-{% columns fullWidth="true" %}
+---
+
+## Learn
+
+Understand how everything works.
+
+{% columns %}
 {% column width="50%" %}
-## Robots
+### MARS Hardware
 
 <figure><img src=".gitbook/assets/isometric_crop.png" alt="" width="188"><figcaption></figcaption></figure>
 
-MARS, Innate's first robot, is a portable mobile manipulator **under $2k** capable of running embodied agents and VLAs.
-
-Perfect for developers & hobbyists looking to build on the state of the art of AI
+Sensors, arm specifications, onboard computer, and what makes MARS capable of running embodied AI — all under $2k.
 
 {% content-ref url="robots/mars/" %}
 [mars](robots/mars/)
@@ -48,25 +72,64 @@ Perfect for developers & hobbyists looking to build on the state of the art of A
 {% endcolumn %}
 
 {% column width="50%" %}
-## Innate OS & BASIC
+### Software & BASIC
 
-How to develop and train your robot running the Innate OS and its brain BASIC.
+<figure><img src=".gitbook/assets/placeholder-software.png" alt="" width="188"><figcaption></figcaption></figure>
 
-Run your first agent in minutes, learn how to make complex agents with VLAs, and share your agents with others.
+How agents, skills, inputs, and BASIC (our cloud brain) work together to make your robot intelligent.
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="software/overview.md" %}
+[overview.md](software/overview.md)
 {% endcontent-ref %}
 {% endcolumn %}
 {% endcolumns %}
 
+---
 
+## Go Deeper
 
+For developers who want full control.
 
+{% columns %}
+{% column width="33%" %}
+### Dev Setup
 
-<p align="center"><strong>Any question that this documentation cannot answer ?</strong></p>
+<figure><img src=".gitbook/assets/placeholder-dev.png" alt="" width="120"><figcaption></figcaption></figure>
 
-<p align="center"><a href="https://discord.com/invite/KtkyT97kc7"><img src="https://i0.wp.com/nikke.gg/wp-content/uploads/join-us-discord.png?fit=728%2C200&#x26;ssl=1" alt="Join our Discord server"></a></p>
+SSH access, IDE configuration, and local development workflows.
 
+{% content-ref url="software/development-setup.md" %}
+[development-setup.md](software/development-setup.md)
+{% endcontent-ref %}
+{% endcolumn %}
 
+{% column width="33%" %}
+### Advanced / ROS2
 
+<figure><img src=".gitbook/assets/placeholder-ros2.png" alt="" width="120"><figcaption></figcaption></figure>
+
+Low-level ROS2 topics, services, and actions for roboticists.
+
+{% content-ref url="software/advanced/" %}
+[advanced](software/advanced/)
+{% endcontent-ref %}
+{% endcolumn %}
+
+{% column width="33%" %}
+### Troubleshooting
+
+<figure><img src=".gitbook/assets/placeholder-troubleshoot.png" alt="" width="120"><figcaption></figcaption></figure>
+
+Common issues, hardware fixes, and how to debug via SSH.
+
+{% content-ref url="robots/mars/troubleshooting.md" %}
+[troubleshooting.md](robots/mars/troubleshooting.md)
+{% endcontent-ref %}
+{% endcolumn %}
+{% endcolumns %}
+
+---
+
+<p align="center"><strong>Questions? Join our community.</strong></p>
+
+<p align="center"><a href="https://discord.com/invite/KtkyT97kc7"><img src="https://img.shields.io/badge/Discord-Join%20Us-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Join our Discord"></a></p>
