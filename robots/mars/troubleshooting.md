@@ -45,6 +45,27 @@ Once inside the tmux session, you'll see multiple windows or panes, each running
 
 ---
 
+## Common Hardware Issues
+
+### Arm Goes Limp / Servos Not Holding Position
+
+If the arm loses tension and goes limp (servos not holding their position), this is typically a servo communication issue that can be resolved by rebooting the arm:
+
+**Option 1: Reboot via the App (Recommended)**
+1. Open the Innate Controller App
+2. Go to **Configuration**
+3. Select the **Dev** tab
+4. Tap **Reboot Arm**
+
+**Option 2: Full Robot Restart**
+1. Unplug the robot's power
+2. Wait a few seconds
+3. Plug it back in
+
+The arm should regain tension and hold position after either of these steps.
+
+---
+
 ## Contact us
 
 When you identify an issue, please reach out to us on [Discord](https://discord.com/invite/KtkyT97kc7) with:
