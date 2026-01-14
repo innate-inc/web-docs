@@ -16,8 +16,7 @@ All the examples below are possible autonomously — some of them might require 
 * <i class="fa-chess">:chess:</i> A Chess Playing Robot that roasts you while you play (or adopts a different character depending on the user).
 * <i class="fa-shield-quartered">:shield-quartered:</i> A Security Robot that can open doors and explore the place, and call 911 if it sees someone.
 * <i class="fa-martini-glass-citrus">:martini-glass-citrus:</i> A food serving robot that can put food in your plate when you show one in front of it.
-* <i class="fa-bell-concierge">:bell-concierge:</i> A concierge robot that gives indication to visitors, flyers, and drives them to destination.\
-
+* <i class="fa-bell-concierge">:bell-concierge:</i> A concierge robot that gives indication to visitors, flyers, and drives them to destination.<br>
 
 ## Autonomous demos
 

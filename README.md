@@ -8,7 +8,7 @@ icon: house
 
 At Innate, we make **affordable & intuitive AI robots** that you can teach and program.
 
----
+***
 
 ## Get Started
 
@@ -16,8 +16,6 @@ Start building with MARS.
 
 {% tabs %}
 {% tab title="Quick Start" %}
-<figure><img src=".gitbook/assets/placeholder-quickstart.png" alt="" width="300"><figcaption></figcaption></figure>
-
 **Get your robot up and running**
 
 Connect your MARS, control it with the app, and run your first pre-built agent.
@@ -28,8 +26,6 @@ Connect your MARS, control it with the app, and run your first pre-built agent.
 {% endtab %}
 
 {% tab title="Build an Agent" %}
-<figure><img src=".gitbook/assets/placeholder-agent.png" alt="" width="300"><figcaption></figcaption></figure>
-
 **Create your first robot app**
 
 Write an agent with skills and prompts — make your robot do something new.
@@ -40,8 +36,6 @@ Write an agent with skills and prompts — make your robot do something new.
 {% endtab %}
 
 {% tab title="See Examples" %}
-<figure><img src=".gitbook/assets/placeholder-examples.png" alt="" width="300"><figcaption></figcaption></figure>
-
 **Watch MARS in action**
 
 Security patrol, sock cleaning, chess playing, and more real-world demos.
@@ -52,7 +46,7 @@ Security patrol, sock cleaning, chess playing, and more real-world demos.
 {% endtab %}
 {% endtabs %}
 
----
+***
 
 ## Learn
 
@@ -60,11 +54,13 @@ Understand how everything works.
 
 {% columns %}
 {% column width="50%" %}
-### MARS Hardware
+#### MARS
 
 <figure><img src=".gitbook/assets/isometric_crop.png" alt="" width="188"><figcaption></figcaption></figure>
 
-Sensors, arm specifications, onboard computer, and what makes MARS capable of running embodied AI — all under $2k.
+
+
+Specifications, Control, Extensions, Updates, and what makes MARS capable of running embodied AI — all under $2k.
 
 {% content-ref url="robots/mars/" %}
 [mars](robots/mars/)
@@ -72,11 +68,11 @@ Sensors, arm specifications, onboard computer, and what makes MARS capable of ru
 {% endcolumn %}
 
 {% column width="50%" %}
-### Software & BASIC
+#### Software & Brain
 
-<figure><img src=".gitbook/assets/placeholder-software.png" alt="" width="188"><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/carbon (14).png" alt=""><figcaption></figcaption></figure>
 
-How agents, skills, inputs, and BASIC (our cloud brain) work together to make your robot intelligent.
+Use agents, skills, inputs, with our cloud brain to make your robot intelligent autonomously.
 
 {% content-ref url="software/overview.md" %}
 [overview.md](software/overview.md)
@@ -84,7 +80,7 @@ How agents, skills, inputs, and BASIC (our cloud brain) work together to make yo
 {% endcolumn %}
 {% endcolumns %}
 
----
+***
 
 ## Go Deeper
 
@@ -92,9 +88,7 @@ For developers who want full control.
 
 {% columns %}
 {% column width="33%" %}
-### Dev Setup
-
-<figure><img src=".gitbook/assets/placeholder-dev.png" alt="" width="120"><figcaption></figcaption></figure>
+#### Dev Setup
 
 SSH access, IDE configuration, and local development workflows.
 
@@ -104,9 +98,7 @@ SSH access, IDE configuration, and local development workflows.
 {% endcolumn %}
 
 {% column width="33%" %}
-### Advanced / ROS2
-
-<figure><img src=".gitbook/assets/placeholder-ros2.png" alt="" width="120"><figcaption></figcaption></figure>
+#### Advanced / ROS2
 
 Low-level ROS2 topics, services, and actions for roboticists.
 
@@ -116,9 +108,7 @@ Low-level ROS2 topics, services, and actions for roboticists.
 {% endcolumn %}
 
 {% column width="33%" %}
-### Troubleshooting
-
-<figure><img src=".gitbook/assets/placeholder-troubleshoot.png" alt="" width="120"><figcaption></figcaption></figure>
+#### Troubleshooting
 
 Common issues, hardware fixes, and how to debug via SSH.
 
@@ -128,8 +118,8 @@ Common issues, hardware fixes, and how to debug via SSH.
 {% endcolumn %}
 {% endcolumns %}
 
----
+***
 
 <p align="center"><strong>Questions? Join our community.</strong></p>
 
-<p align="center"><a href="https://discord.com/invite/KtkyT97kc7"><img src="https://img.shields.io/badge/Discord-Join%20Us-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Join our Discord"></a></p>
+<p align="center"><a href="https://discord.com/invite/KtkyT97kc7"><img src="https://img.shields.io/badge/Discord-Join%20Us-5865F2?style=for-the-badge&#x26;logo=discord&#x26;logoColor=white" alt="Join our Discord"></a></p>
