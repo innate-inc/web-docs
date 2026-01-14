@@ -1,5 +1,5 @@
 ---
-description: How to create Behavior Apps for Innate Robots using the SDK - or ROS2 straight
+description: How to create Agent Apps for Innate Robots using the SDK - or ROS2 straight
 ---
 
 # Overview
@@ -16,22 +16,30 @@ This abstraction layer allows to create powerful agentic applications quickly wi
 
 
 
-#### Behaviors
+#### Agents
 
-The central concept of the Innate OS is the **`behavior`** , which is our name for a **physical app for robots.** They are defined by a **system prompt** and a set of **skills** they can use.
+The central concept of the Innate OS is the **`agent`** , which is our name for a **physical app for robots.** They are defined by a **system prompt** and a set of **skills** they can use.
 
 {% hint style="info" %}
-**Behaviors** are like **physical apps** for Innate robots.
+**Agents** are like **physical apps** for Innate robots.
 {% endhint %}
 
 
 
-The most simple behavior is:
+The most simple agent is:
 
 ```python
-class HelloWorld(Behavior):
-    def name(self) -> str:
+from brain_client.agent_types import Agent
+from typing import List
+
+class HelloWorld(Agent):
+    @property
+    def id(self) -> str:
         return "hello_world"
+
+    @property
+    def display_name(self) -> str:
+        return "Hello World"
 
     def get_skills(self) -> List[str]:
         return [""]
@@ -44,7 +52,7 @@ class HelloWorld(Behavior):
 
 This will start the robot and make it say hello world on the speakers once.
 
-See more in [behaviors](behaviors/ "mention")
+See more in [agents](agents/ "mention")
 
 
 
@@ -52,7 +60,7 @@ See more in [behaviors](behaviors/ "mention")
 
 **Skills** are the second core concept of the Innate OS.
 
-A skill can be defined with code, a model checkpoint (such as a **VLA**) or other specific interfaces we define for you. Adding a skill to a behavior is like giving additional capabilities to your robot.
+A skill can be defined with code, a model checkpoint (such as a **VLA**) or other specific interfaces we define for you. Adding a skill to an agent is like giving additional capabilities to your robot.
 
 {% hint style="info" %}
 Similarly to agentic frameworks, **skills** can be thought as **tool calls**, with extra sauce.
@@ -60,7 +68,7 @@ Similarly to agentic frameworks, **skills** can be thought as **tool calls**, wi
 
 
 
-Skills can be interrupted by the robot during execution if required, and send feedback in the context of to the running behavior.
+Skills can be interrupted by the robot during execution if required, and send feedback in the context of to the running agent.
 
 
 
@@ -70,7 +78,7 @@ See how to create skills in [skills](skills/ "mention")
 
 #### BASIC
 
-BASIC is the embodied AI agent that controls Mars. BASIC can run behaviors and skills, and gives Mars the ability to reason, memorize, plan and make decisions as it runs.
+BASIC is the embodied AI agent that controls Mars. BASIC can run agents and skills, and gives Mars the ability to reason, memorize, plan and make decisions as it runs.
 
 
 

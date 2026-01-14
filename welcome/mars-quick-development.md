@@ -1,15 +1,15 @@
 ---
 description: >-
-  Learn to create your first behavior, train your first manipulation model, give
+  Learn to create your first agent, train your first manipulation model, give
   MARS the ability to read emails, and put the pieces together
 icon: screwdriver-wrench
 ---
 
 # MARS Quick Development
 
-## Create your first behavior
+## Create your first agent
 
-Now that you know the basics, you can create your first behavior for Mars using the SDK. On the app, go to Settings -> Wifi and read the IP of the robot.
+Now that you know the basics, you can create your first agent for Mars using the SDK. On the app, go to Settings -> Wifi and read the IP of the robot.
 
 
 
@@ -23,16 +23,20 @@ ssh jetson1@<YOUR-ROBOT-IP>
 
 
 
-Go to `~/behaviors/` and create a `hello_world.py` behavior file:
+Go to `~/agents/` and create a `hello_world.py` agent file:
 
 ```python
 from typing import List
-from brain_client.behaviors.types import Behavior
+from brain_client.agent_types import Agent
 
-class HelloWorld(Behavior):
+class HelloWorld(Agent):
     @property
-    def name(self) -> str:
+    def id(self) -> str:
         return "hello_world"
+
+    @property
+    def display_name(self) -> str:
+        return "Hello World"
 
     def get_skills(self) -> List[str]:
         return [
@@ -41,8 +45,7 @@ class HelloWorld(Behavior):
         ]
 
     def get_prompt(self) -> str:
-        return 
-"""
+        return """
 You are a friendly greeting robot whose sole purpose is to say hello world to the user!
 
 Your personality:
@@ -57,11 +60,11 @@ Instructions:
 
 
 
-"_wave_" and "_navigate\_to\_position_" are basic skills that come already created for the robot. This behavior makes use of them to act autonomously.
+"_wave_" and "_navigate\_to\_position_" are basic skills that come already created for the robot. This agent makes use of them to act autonomously.
 
 
 
-Save the file, then restart the robot (unplug and plug again), open the app and start your behavior. Sit in front of the robot, and observe!
+Save the file, then restart the robot (unplug and plug again), open the app and start your agent. Sit in front of the robot, and observe!
 
 
 
@@ -69,10 +72,10 @@ Save the file, then restart the robot (unplug and plug again), open the app and 
 
 
 
-To dive more in the details of how to develop behaviors:
+To dive more in the details of how to develop agents:
 
-{% content-ref url="../software/behaviors/" %}
-[behaviors](../software/behaviors/)
+{% content-ref url="../software/agents/" %}
+[agents](../software/agents/)
 {% endcontent-ref %}
 
 
@@ -156,18 +159,22 @@ class RetrieveEmails(Primitive):
 
 
 
-You can run this skill in a behavior that can query it:
+You can run this skill in an agent that can query it:
 
 
 
 ```python
 from typing import List
-from brain_client.behaviors.types import Behavior
+from brain_client.agent_types import Agent
 
-class EmailAssistant(Behavior):
+class EmailAssistant(Agent):
     @property
-    def name(self) -> str:
+    def id(self) -> str:
         return "email_assistant"
+
+    @property
+    def display_name(self) -> str:
+        return "Email Assistant"
 
     def get_skills(self) -> List[str]:
         return [
@@ -175,8 +182,7 @@ class EmailAssistant(Behavior):
         ]
 
     def get_prompt(self) -> str:
-        return 
-"""
+        return """
 You are an email assistant. 
 When the user sits in front of you, you should tell them what their last email is
 """

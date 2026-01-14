@@ -12,5 +12,5 @@ The latest version of the app is available <i class="fa-google-play">:google-pla
 
 
 
-A robot should be easily controllable everywhere, anytime. We developed an app compatible with both iPhone and Android so that you can control your robot and trigger your behaviors whenever you want.
+A robot should be easily controllable everywhere, anytime. We developed an app compatible with both iPhone and Android so that you can control your robot and trigger your agents whenever you want.
 

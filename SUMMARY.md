@@ -6,6 +6,7 @@
 * [MARS Quick Start](welcome/mars-quick-start.md)
 * [MARS Quick Development](welcome/mars-quick-development.md)
 * [MARS Example use-cases](welcome/mars-example-use-cases.md)
+* [Community Tutorials & Updates](welcome/community-tutorials.md)
 * [Frequently Asked Questions](welcome/frequently-asked-questions.md)
 
 ## Robots
@@ -36,10 +37,10 @@
   * [Manipulation skills](software/skills/manipulation-skills.md)
   * [Navigation skills](software/skills/navigation-skills.md)
   * [More physical skills](software/skills/more-physical-skills.md)
-* [Behaviors](software/behaviors/README.md)
-  * [Definitions](software/behaviors/definitions.md)
-  * [Starting a behavior](software/behaviors/starting-a-behavior.md)
-  * [Behavior examples](software/behaviors/behavior-examples.md)
+* [Agents](software/agents/README.md)
+  * [Definitions](software/agents/definitions.md)
+  * [Starting an agent](software/agents/starting-an-agent.md)
+  * [Agent examples](software/agents/agent-examples.md)
 * [Inputs](software/inputs/README.md)
   * [Definition](software/inputs/definition.md)
   * [Example: Microphone](software/inputs/example-microphone.md)

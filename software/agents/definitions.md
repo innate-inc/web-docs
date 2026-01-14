@@ -1,8 +1,8 @@
 # Definitions
 
-Behaviors are located in `~/behaviors` on your robot.
+Agents are located in `~/agents` on your robot.
 
-Defining a Behavior requires two components.
+Defining an Agent requires two components.
 
 1. A list of [skills](../skills/ "mention") that [basic](../basic/ "mention") has access to, like picking an object, navigating, querying the internet...
 2. A natural language prompt on how to perform the task
@@ -13,13 +13,25 @@ Defining a Behavior requires two components.
 ## Template: A simple hello world
 
 ```python
-from innate.behavior import Behavior
+from brain_client.agent_types import Agent
 from typing import List
 
-class HelloWorld(Behavior):
+class HelloWorld(Agent):
+    @property
+    def id(self) -> str:
+        return "hello_world"
+
+    @property
+    def display_name(self) -> str:
+        return "Hello World"
+
+    @property
+    def display_icon(self) -> str:
+        return "assets/hello_world.png"
+
     def get_skills(self) -> List[str]:
-        # List the Skills this behavior can call.
-        return ["wave", "navigate"]
+        # List the Skills this agent can call.
+        return ["navigate_to_position", "wave"]
 
 
     def get_prompt(self) -> str:

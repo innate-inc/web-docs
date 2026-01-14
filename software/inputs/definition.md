@@ -1,6 +1,6 @@
 # Definition
 
-Every InputDevice has to implement a `name`, an `on_open` and `on_close` methods. The on\_open is called when a behavior is started with this device, and when stopped, `on_close` is called.
+Every InputDevice has to implement a `name`, an `on_open` and `on_close` methods. The on\_open is called when an agent is started with this device, and when stopped, `on_close` is called.
 
 ## Template
 
@@ -17,7 +17,7 @@ class MyInput(InputDevice):
 
     @property
     def name(self) -> str:
-        return "my_input"  # used by behaviors/directives
+        return "my_input"  # used by agents
 
     def on_open(self):
         self._stop_evt.clear()

@@ -46,7 +46,7 @@ For default credentials, IP addresses, and connection methods (WiFi vs USB-C), s
 
 - **Set up SSH keys** to avoid entering the password repeatedly
 - **Keep the connection alive** by configuring `ServerAliveInterval` in your `~/.ssh/config`
-- **Use the integrated terminal** to run ROS2 commands and test behaviors directly
+- **Use the integrated terminal** to run ROS2 commands and test agents directly
 
 ---
 

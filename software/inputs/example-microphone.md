@@ -6,7 +6,7 @@ MARS, in particular, can easily be augmented with a $50 microphone to be able to
 
 
 
-By default, a "micro" input device is available on MARS. If you have a microphone plugged in and are triggering a behavior using it, you will be able to talk directly to MARS. See below the relevant part of the code in the hello world behavior (same than in [definitions.md](../behaviors/definitions.md "mention")).
+By default, a "micro" input device is available on MARS. If you have a microphone plugged in and are triggering an agent using it, you will be able to talk directly to MARS. See below the relevant part of the code in the hello world agent (same than in [definitions.md](../agents/definitions.md "mention")).
 
 ```python
 def get_inputs(self) -> List[str]:

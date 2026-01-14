@@ -52,7 +52,7 @@ Perfect for developers & hobbyists looking to build on the state of the art of A
 
 How to develop and train your robot running the Innate OS and its brain BASIC.
 
-Run your first behavior in minutes, learn how to make complex behaviors with VLAs, and share your behaviors with others.
+Run your first agent in minutes, learn how to make complex agents with VLAs, and share your agents with others.
 
 {% content-ref url="broken-reference" %}
 [Broken link](broken-reference)

@@ -1,7 +1,7 @@
 ---
 description: >-
   Learn how to control MARS with your phone and the controller arm, make it
-  navigate and talk, and trigger autonomous behaviors & skills made by others
+  navigate and talk, and trigger autonomous agents & skills made by others
 icon: golang
 ---
 
@@ -91,15 +91,15 @@ To run one, go back to the home screen, select manual control, and open the skil
 
 
 
-## Use an existing behavior
+## Use an existing agent
 
-BASIC allows to run programs we call "behaviors" that determine the robot's purpose and abilities. On the app, you can see which ones are already installed.
+BASIC allows to run programs we call "agents" that determine the robot's purpose and abilities. On the app, you can see which ones are already installed.
 
 Try out the "**Roast me**" one, the "**Find my shoes**", or the "**Pick up the trash**" straight from the app.
 
 
 
-Before running a behavior, you can observe what it was programmed to do.
+Before running an agent, you can observe what it was programmed to do.
 
 
 
@@ -139,7 +139,7 @@ Now that MARS has spatial memory, you can drive it around and it will memorize w
 
 Now you know how to run basic controls of the robot from the app.
 
-<i class="fa-arrow-right">:arrow-right:</i> Next up: Create your first behavior and train your first manipulation model, to run them autonomously!
+<i class="fa-arrow-right">:arrow-right:</i> Next up: Create your first agent and train your first manipulation model, to run them autonomously!
 
 {% content-ref url="mars-quick-development.md" %}
 [mars-quick-development.md](mars-quick-development.md)
@@ -151,7 +151,7 @@ Now you know how to run basic controls of the robot from the app.
 
 Congrats!
 
-You can now create basic behaviors that allow the robot to interact with the world. There is a lot more to try.
+You can now create basic agents that allow the robot to interact with the world. There is a lot more to try.
 
 You can create additional skills like "wave" and "navigate" to use the arm for learned actions or have the arm access the internet to use Google, send emails, call other agents...
 
@@ -165,7 +165,7 @@ PAGE TO WRITE SKILLS WITH CODE
 
 PAGE TO TEACH AN ARM SKILL WITH INVERSE KINEMATICS
 
-PAGE FOR SHARING A BEHAVIOR
+PAGE FOR SHARING AN AGENT
 
 ADVANCED: USE AND MODIFY THE CORE ROS2 OS
 
@@ -177,7 +177,7 @@ ADVANCED: IMPLEMENTING A DIFFERENT MANIPULATION MODEL
 
 Innate robots introduce a new paradigm in programming robots through code, demonstrations and language.
 
-Our robots run through **skills and behaviors.**
+Our robots run through **skills and agents.**
 
 **Skills** are atomic capabilities built for MARS. These can be digital written in code, like sending emails, or physical like pick up socks, navigate to room.
 
@@ -185,9 +185,9 @@ Skills can be written as **pure code** using the sdk, trained models for manipul
 
 
 
-**Behaviors** are like an app for your robot.
+**Agents** are like an app for your robot.
 
-A BASIC behavior is a composition of atomic skills with a system prompt. A robot running on a behavior performs complex long horizon task wrapping together its skills with reasoning, memory and decision making capabilities.
+A BASIC agent is a composition of atomic skills with a system prompt. A robot running on an agent performs complex long horizon task wrapping together its skills with reasoning, memory and decision making capabilities.
 
 ### Example: Security Robot
 
@@ -201,7 +201,7 @@ Install the Innate SDL on your workstation, or download the Innate app from your
 pip install innate-sdk 
 ```
 
-You can start coding right after by defining files in `~/skills` and `~/behaviors`
+You can start coding right after by defining files in `~/skills` and `~/agents`
 
 ### 2. Train Skill to Open Doors
 
@@ -265,17 +265,25 @@ class SendEmail(Skill):
 
 ```
 
-### 4. Create a Behavior
+### 4. Create an Agent
 
 This is what describes the purpose of the robot during its execution. Define through prompting what the robot should do in different situations, add its relevant skills.
 
 ```python
-class SecurityGuard(Behavior):
-    def name(self) -> str:
-        return "security_guard_behavior"
+from typing import List
+from brain_client.agent_types import Agent
+
+class SecurityGuardAgent(Agent):
+    @property
+    def id(self) -> str:
+        return "security_guard"
+
+    @property
+    def display_name(self) -> str:
+        return "Security Guard"
 
     def get_skills(self) -> List[str]:
-        return ["navigate", "open_door", "send_email"]
+        return ["navigate_to_position", "open_door", "send_email"]
 
     def get_prompt(self) -> str:
         return """You are a security guard robot. Patrol the house, 
@@ -285,15 +293,15 @@ class SecurityGuard(Behavior):
 
 ```
 
-### 5. Run The Behavior
+### 5. Run The Agent
 
-New Behaviors are automatically registered. You can run them from the app.
+New Agents are automatically registered. You can run them from the app.
 
 {% embed url="https://youtu.be/b7cNKEcER24" %}
 
 ### 6. Share
 
-Behaviors and Skills are shareable working across robots.&#x20;
+Agents and Skills are shareable working across robots.&#x20;
 
 You can simply share the files in a github repository like our [examples repository](https://app.gitbook.com/u/zOCxacgyelY4F6REjthFZpRxvMC2).
 

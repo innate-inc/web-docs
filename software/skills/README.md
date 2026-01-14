@@ -1,6 +1,6 @@
 # Skills
 
-Skills are atomic robot capabilities that are combined and chained by BASIC to enable complex long horizon behaviors. Skills can code for physical capabilities ( Manipulation, Navigation etc), digital capabilities (emails, data processing, API calls) or both.
+Skills are atomic robot capabilities that are combined and chained by BASIC to enable complex long horizon agents. Skills can code for physical capabilities ( Manipulation, Navigation etc), digital capabilities (emails, data processing, API calls) or both.
 
 Defining a skill requires three main components which BASIC can interact with
 
