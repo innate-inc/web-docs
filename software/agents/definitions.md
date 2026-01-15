@@ -1,22 +1,71 @@
-# Definitions
+# Anatomy of an Agent
 
-Agents are located in `~/agents` on your robot.
+Every agent follows the same structure. Once you understand it, you can create any agent you need.
 
-Defining an Agent requires two components.
+## File Location
 
-1. A list of [skills](../skills/ "mention") that [basic](../basic/ "mention") has access to, like picking an object, navigating, querying the internet...
-2. A natural language prompt on how to perform the task
-3. (Optional) a list of additional inputs the agent can take - like microphone in, air data, incoming emails...
+Agents are stored in `~/agents` on your robot. The system automatically discovers Python files in this directory—no registration or configuration required.
 
+Add a file, and the agent appears. Remove it, and the agent disappears.
 
+## Core Interface
 
-## Template: A simple hello world
+Every agent implements four methods:
+
+| Method | Returns | Purpose |
+|--------|---------|---------|
+| `id` | `str` | Unique identifier (snake_case) |
+| `display_name` | `str` | Human-readable name shown in the app |
+| `get_skills()` | `List[str]` | Skills this agent can use |
+| `get_prompt()` | `str` | Personality and behavioral instructions |
+
+Optional methods:
+
+| Method | Returns | Purpose |
+|--------|---------|---------|
+| `display_icon` | `str` | Path to a 32×32 pixel icon |
+| `get_inputs()` | `List[str]` | Input devices to activate (e.g., `["micro"]`) |
+| `uses_gaze()` | `bool` | Enable person-tracking eye movement |
+
+## Minimal Example
+
+The simplest possible agent:
 
 ```python
-from brain_client.agent_types import Agent
 from typing import List
+from brain_client.agent_types import Agent
+
+
+class MyAgent(Agent):
+    @property
+    def id(self) -> str:
+        return "my_agent"
+
+    @property
+    def display_name(self) -> str:
+        return "My Agent"
+
+    def get_skills(self) -> List[str]:
+        return []
+
+    def get_prompt(self) -> str:
+        return "You are a robot."
+```
+
+This agent loads and runs, but does very little—it has no skills and a minimal prompt.
+
+## Complete Example
+
+A functional agent with skills, inputs, and a detailed prompt:
+
+```python
+from typing import List
+from brain_client.agent_types import Agent
+
 
 class HelloWorld(Agent):
+    """Greets visitors with a friendly wave."""
+
     @property
     def id(self) -> str:
         return "hello_world"
@@ -30,24 +79,91 @@ class HelloWorld(Agent):
         return "assets/hello_world.png"
 
     def get_skills(self) -> List[str]:
-        # List the Skills this agent can call.
         return ["navigate_to_position", "wave"]
 
+    def get_inputs(self) -> List[str]:
+        return ["micro"]
 
     def get_prompt(self) -> str:
-        # Define how BASIC should use the Skills.
         return """
-You are a robot who can say hello world to the user.
+You are a friendly robot who greets people.
 
-- Speak in lowercase. You can respond to the user.
-- Don't navigate, just turn around if you don't see the user.
-- Say hello world while waving if you see the user.
+- Speak in a casual, warm tone
+- If you don't see anyone, turn around to look for them
+- When you see a person, wave and say hello
+- Respond to what people say to you
 """
-    
-    def get_inputs(self) -> List[str]:
-        # This directive can use an intergrated microphone input to hear user
-        return ["micro"] 
-        
-        
 
+    def uses_gaze(self) -> bool:
+        return True
 ```
+
+This agent:
+- **Has skills**: Navigation and waving
+- **Has inputs**: Microphone for voice interaction
+- **Has personality**: Friendly, casual, responsive
+- **Uses gaze**: Tracks nearby people with its eyes
+
+## Writing Effective Prompts
+
+The prompt determines how the robot behaves. Skills define what's *possible*; the prompt defines what *actually happens*.
+
+A good prompt covers:
+
+- **Personality**: Tone, communication style, demeanor
+- **Goals**: What the robot should accomplish
+- **Constraints**: What the robot should avoid
+- **Strategy**: How to approach the task
+
+Be specific. The AI interprets your prompt literally—vague instructions produce unpredictable results.
+
+## Template
+
+Copy and modify this template for new agents:
+
+```python
+from typing import List
+from brain_client.agent_types import Agent
+
+
+class MyCustomAgent(Agent):
+    """One-line description of what this agent does."""
+
+    @property
+    def id(self) -> str:
+        return "my_custom_agent"
+
+    @property
+    def display_name(self) -> str:
+        return "My Custom Agent"
+
+    @property
+    def display_icon(self) -> str:
+        return "assets/my_icon.png"  # Optional
+
+    def get_skills(self) -> List[str]:
+        return [
+            "navigate_to_position",
+            "wave",
+            "turn_and_move",
+        ]
+
+    def get_inputs(self) -> List[str]:
+        return ["micro"]
+
+    def get_prompt(self) -> str:
+        return """
+Describe who the robot is and what it should do.
+
+Include:
+- Personality and tone
+- Goals and objectives
+- How to approach the task
+- What to avoid
+"""
+
+    def uses_gaze(self) -> bool:
+        return True
+```
+
+Save this as `my_agent.py` in `~/agents`, and the system will load it automatically.
