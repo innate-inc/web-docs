@@ -1,26 +1,34 @@
 # Charging the Battery
 
-This page explains how to charge your MARS robot's battery.
+❗ You should charge your battery **carefully**. This can be dangerous if done improperly.
 
-TEMP
+Follow the instructions in the video to make sure you don't encounter any issues or endanger yourself.
+
+{% embed url="https://youtu.be/SnGpyMkS0WM" %}
 
 ***
 
 ## What you need
 
-Use the charger provided with your robot.
+Use the charger provided with your robot (see video)
+
+It comes with a balancing cable that allows to fit your battery's white balancing cable properly into the 3S hole.
 
 ***
 
 ## How to charge
 
-1. Plug the charger cable into the battery as shown below:
+1. Plug the charger cable into the battery as shown in the video.
 2. Read the voltage displayed on the charger. It should be between **10.5V and 12.6V**.
-3. Press and hold the **Enter** button on the charger until the device asks you to confirm starting the charge.
-4. Confirm to begin charging.
+3. The battery type has to be set as **LiPo** and the number of cells to **3S**.
+4. Press and hold the **Enter** button on the charger until the device asks you to confirm starting the charge.
+5. Confirm to begin charging.
+6. Verify that the voltage stays between **10.5V and 12.6V.**
 
 ***
 
 ## Important warning
 
-**Do not charge the battery if the white balancing connector is not plugged in.** This connector balances the cells and should NOT be disconnected before charging
+**Do not charge the battery if the white balancing connector is not plugged in.** This connector balances the cells and should NOT be disconnected before charging.
+
+If your battery pack shows a bump, the battery is unsafe and should be replaced. Reach out to Innate for more information.
