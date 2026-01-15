@@ -23,4 +23,4 @@ Use the charger provided with your robot.
 
 ## Important warning
 
-:::warning **Do not charge the battery if the white balancing connector is plugged in.** This connector balances the cells and should be disconnected before charging. :::
+**Do not charge the battery if the white balancing connector is not plugged in.** This connector balances the cells and should NOT be disconnected before charging
