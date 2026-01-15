@@ -2,7 +2,7 @@
 
 This page explains how to charge your MARS robot's battery.
 
-{% embed url="https://youtu.be/mAVvoHon1bM" %}
+TEMP
 
 ***
 
