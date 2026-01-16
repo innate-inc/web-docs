@@ -23,6 +23,7 @@
   * [Connecting via SSH](robots/mars/connecting-via-ssh.md)
   * [Charging the Battery](robots/mars/charging-battery.md)
   * [FAQ](robots/mars/faq.md)
+  * [Changing the Voice](robots/mars/changing-voice.md)
   * [Troubleshooting](robots/mars/troubleshooting.md)
     * [Critical Fix (MARS IDs 1-11)](robots/mars/critical-fix-before-jan-16.md)
 * [Innate Controller App](robots/innate-controller-app/README.md)
