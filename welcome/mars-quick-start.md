@@ -11,8 +11,8 @@ This page describes the experience of receiving your MARS robot for the first ti
 
 If you want a more technical introduction to our SDK and the underlying ROS2 system, please go to:
 
-{% content-ref url="broken-reference" %}
-[Broken link](broken-reference)
+{% content-ref url="mars-quick-development.md" %}
+[mars-quick-development.md](mars-quick-development.md)
 {% endcontent-ref %}
 
 
@@ -29,7 +29,7 @@ MARS turns on automatically when plugging the battery in. Put it on the floor, p
 
 
 
-The app is available <i class="fa-google-play">:google-play:</i> [here for android](https://innate.bot/android_app) and <i class="fa-app-store-ios">:app-store-ios:</i> [here for ios](https://innate.bot/ios_app).
+The app is available <i class="fa-google-play">:google-play:</i> [here for android](https://innate.bot/android_app) and <i class="fa-app-store-ios">:app-store-ios:</i> [here for ios](https://testflight.apple.com/join/YeChe4A7).
 
 
 

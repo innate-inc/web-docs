@@ -1,6 +1,6 @@
 # Control via app & leader arm
 
-MARS (and all Innate robots) are controllable via our app available <i class="fa-google-play">:google-play:</i> [here for android](https://innate.bot/android_app) and <i class="fa-app-store-ios">:app-store-ios:</i> [here for ios](https://innate.bot/ios_app).
+MARS (and all Innate robots) are controllable via our app available <i class="fa-google-play">:google-play:</i> [here for android](https://innate.bot/android_app) and <i class="fa-app-store-ios">:app-store-ios:</i> [here for ios](https://testflight.apple.com/join/YeChe4A7).
 
 
 
