@@ -1,10 +1,32 @@
 # Changing the Robot's Voice
 
-MARS uses [Cartesia](https://cartesia.ai/) for text-to-speech. You can customize the robot's voice by changing the Cartesia voice ID in the brain launch file.
+MARS uses [Cartesia](https://cartesia.ai/) for text-to-speech. You can customize the robot's voice by changing the Cartesia voice ID.
 
-> **Note:** This process requires recompiling the ROS2 workspace. We know it's not the easiest way yet, and it will get easier soon.
+## Method 1: Using Environment Variables (Recommended)
 
-## Steps
+The simplest way to change the voice is through the `.env` file. No rebuild required.
+
+### Steps
+
+1. SSH into your robot (see [connecting-via-ssh.md](connecting-via-ssh.md "mention"))
+
+2. Edit the `.env` file:
+
+```bash
+nano ~/innate-os/.env
+```
+
+3. Add or modify the `CARTESIA_VOICE_ID` variable:
+
+```bash
+CARTESIA_VOICE_ID=your-voice-id-here
+```
+
+4. Save the file and restart the robot for changes to take effect.
+
+## Method 2: Editing the Launch File (Advanced)
+
+For more permanent changes, you can modify the launch file directly.
 
 ### 1. Find the launch file
 

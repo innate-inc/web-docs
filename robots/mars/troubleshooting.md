@@ -52,17 +52,51 @@ Once inside the tmux session, you'll see multiple windows or panes, each running
 If the arm loses tension and goes limp (servos not holding their position), this is typically a servo communication issue that can be resolved by rebooting the arm:
 
 **Option 1: Reboot via the App (Recommended)**
+
 1. Open the Innate Controller App
 2. Go to **Configuration**
 3. Select the **Dev** tab
 4. Tap **Reboot Arm**
 
+> **Note:** Place the arm in a resting position before rebooting. The app will display an image showing the correct arm position.
+
 **Option 2: Full Robot Restart**
+
 1. Unplug the robot's power
 2. Wait a few seconds
 3. Plug it back in
 
 The arm should regain tension and hold position after either of these steps.
+
+### Arm Restart Notifications
+
+If the arm encounters an issue during operation (such as a servo communication failure), the app will display a notification prompting you to restart the arm. Follow the notification instructions to recover.
+
+### Arm Overload Protection
+
+MARS monitors the arm's servo load in real-time. If the arm is overloaded (e.g., carrying too heavy of an object or encountering an obstruction), the system will detect this and may reduce torque to protect the servos. If you notice reduced arm performance:
+
+1. Remove any heavy objects from the gripper
+2. Clear any obstructions
+3. Reboot the arm via the app if needed
+
+### iOS Arm Control
+
+{% hint style="warning" %}
+**iOS Users:** The leader arm connects via USB-C and is not compatible with iOS devices (for now). If you have an iPhone, please reach out to Innate on [Discord](https://discord.com/invite/KtkyT97kc7) to get access to a free Android phone for leader arm teleoperation.
+{% endhint %}
+
+---
+
+## Low Battery Warning
+
+The app displays a pulsing **Battery Low** warning when the robot's battery voltage drops below 10.53V. When you see this warning:
+
+1. Stop any active tasks
+2. Navigate the robot to its charging station
+3. Connect the charger
+
+Avoid running system updates or intensive operations when the battery is low.
 
 ---
 

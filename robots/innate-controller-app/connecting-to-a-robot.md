@@ -2,7 +2,15 @@
 
 The Innate App connects to your robot via WiFi. It can also work with your phone hotspot.
 
-If this is the first time you are connecting, you will first use Bluetooth to tell the robot which network to connect to and get its ip.
+## First-Time Connection
+
+If this is the first time you are connecting, the app will guide you through an onboarding flow:
+
+1. **Bluetooth Pairing** — The app uses Bluetooth Low Energy (BLE) to discover your robot and configure its network settings
+2. **WiFi Configuration** — Tell the robot which network to connect to
+3. **Connection** — Once on the same network, the app connects to the robot via WiFi
+
+The robot publishes its hostname with a `.local` suffix (e.g., `mars-robot.local`), making it easy to connect even if the IP address changes.
 
 
 

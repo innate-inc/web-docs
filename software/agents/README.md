@@ -22,6 +22,12 @@ No configuration files. No complex setup. Just Python.
 {% column width="66.66666666666666%" valign="middle" %}
 Every Innate robot ships with pre-installed agents that appear on the **Home** screen in the Innate Controller App.
 
+**Built-in agents include:**
+
+- **MARS** — The default agent with a friendly personality, can wave and interact with people
+- **Basic** — A minimal agent for simple demonstrations
+- **Demo** — Showcases various robot capabilities including gaze tracking
+
 These serve as starting points. The real power comes from writing your own agents tailored to your specific use cases.
 {% endcolumn %}
 
