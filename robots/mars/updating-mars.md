@@ -10,6 +10,10 @@ Updating MARS will:
 
 All of this is handled for you by `innate-update`.
 
+{% hint style="info" %}
+A new robot OS version may require you to update the [Innate Controller App](../innate-controller-app/README.md) for full compatibility.
+{% endhint %}
+
 ---
 
 ## Prerequisites
@@ -22,9 +26,9 @@ If you are missing any of these, contact your admin or refer to the internal set
 
 ---
 
-:::tip
+{% hint style="success" %}
 The MARS app will automatically indicate when an OS update is available, so you don't need to manually check for updates regularly.
-:::
+{% endhint %}
 
 ---
 
