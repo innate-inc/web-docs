@@ -6,7 +6,9 @@ icon: house
 
 <figure><img src=".gitbook/assets/Group 1321323070.png" alt=""><figcaption></figcaption></figure>
 
-At Innate, we make **affordable & intuitive AI robots** that you can teach and program.
+**A complete physical AI agent.** Moves, manipulates, talks, listens—all onboard. Watch your grandma, secure your place, bring snacks, play chess, talk to your computer agents... The sky is the limit.
+
+Affordable. Intuitive. Open-source.
 
 ***
 
@@ -48,9 +50,9 @@ Security patrol, sock cleaning, chess playing, and more real-world demos.
 
 ***
 
-## Learn
+## Build
 
-Understand how everything works.
+Everything you need to make it yours.
 
 {% columns %}
 {% column width="50%" %}
@@ -60,7 +62,7 @@ Understand how everything works.
 
 
 
-Specifications, Control, Extensions, Updates, and what makes MARS capable of running embodied AI — all under $2k.
+Hardware specs, sensors, arm, extensions. Everything that makes MARS a complete embodied AI platform.
 
 {% content-ref url="robots/mars/" %}
 [mars](robots/mars/)
@@ -68,11 +70,11 @@ Specifications, Control, Extensions, Updates, and what makes MARS capable of run
 {% endcolumn %}
 
 {% column width="50%" %}
-#### Software & Brain
+#### Software
 
 <figure><img src=".gitbook/assets/carbon (14).png" alt=""><figcaption></figcaption></figure>
 
-Use agents, skills, inputs, with our cloud brain to make your robot intelligent autonomously.
+Write Python skills, define agent behaviors, hook up inputs. Everything runs onboard—no cloud required.
 
 {% content-ref url="software/overview.md" %}
 [overview.md](software/overview.md)
