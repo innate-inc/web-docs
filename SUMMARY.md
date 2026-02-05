@@ -41,6 +41,7 @@
     * [Physical Skill Examples](software/skills/physical-skill-examples.md)
     * [Digital Skills](software/skills/digital-skills.md)
   * [Policy-Defined Skills](software/skills/policy-defined-skills.md)
+  * [Manual Triggering](software/skills/manual-triggering.md)
 * [Agents](software/agents/README.md)
   * [Anatomy of an Agent](software/agents/definitions.md)
   * [Starting an Agent](software/agents/starting-an-agent.md)

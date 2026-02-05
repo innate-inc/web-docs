@@ -20,7 +20,7 @@ def execute(self, target: str, speed: float = 0.5):
     """
 ```
 
-The agent sees `execute(target: str, speed: float = 0.5)` and knows exactly how to call your skill. Type hints and docstrings matter—they're your API contract with the AI.
+The agent sees `execute(target: str, speed: float = 0.5)` and knows exactly how to call your skill. Type hints matter—they're your API contract with the AI.
 
 ### 2. One-Line Declarations
 
