@@ -11,8 +11,13 @@ In map-free mode, the robot uses its local costmap (obstacle detection from sens
 - Quick deployment in new environments
 - Spaces that change frequently
 - Simple point-to-point navigation
+- Outdoor use
 
 The app displays a local view around the robot showing detected obstacles in real-time.
+
+{% hint style="info" %}
+**Screenshot placeholder:** Map-free mode view in the app showing local costmap and obstacle detection
+{% endhint %}
 
 ### Mapping Mode
 
@@ -21,7 +26,12 @@ Before using full autonomous navigation, you can create a map of your space:
 1. Open the Innate Controller App
 2. Go to **Configuration** → **Mapping** tab
 3. Tap **Create New Map**
-4. Follow the on-screen instructions
+4. Drive the robot around to scan the environment
+5. Save the map when complete
+
+{% hint style="info" %}
+**Screenshot placeholder:** Mapping screen showing the map being built as the robot moves
+{% endhint %}
 
 **Safety tips during mapping:**
 
@@ -33,6 +43,10 @@ Before using full autonomous navigation, you can create a map of your space:
 
 Once you have a saved map, the robot can navigate autonomously to saved locations or positions you specify.
 
+{% hint style="info" %}
+**Screenshot placeholder:** Navigation mode with saved map and trajectory visualization
+{% endhint %}
+
 ## Go-To Mode
 
 The app includes a **Go-To Mode** that lets you visually select a destination:
@@ -42,7 +56,23 @@ The app includes a **Go-To Mode** that lets you visually select a destination:
 3. Tap and drag on the map to set a goal position and orientation
 4. The robot will plan a path and navigate to the goal
 
-The app displays the planned trajectory as a green line on the map, updating in real-time as the robot moves.
+The app displays the planned trajectory as a line on the map, updating in real-time as the robot moves.
+
+{% hint style="info" %}
+**Screenshot placeholder:** Go-To mode with tap-and-drag goal selection and trajectory display
+{% endhint %}
+
+### Stopping Navigation
+
+You can stop navigation at any time using the **Stop** button in the app. The robot will smoothly decelerate and halt.
+
+## Stability Improvements
+
+The robot now navigates more smoothly and reliably:
+
+- **Dynamic footprint** — The navigation system adjusts the robot's footprint based on arm position, avoiding collisions when the arm is extended
+- **Reduced zigzag behavior** — Improved parameter tuning for smoother trajectories
+- **Better goal tolerance** — More consistent arrival at target positions
 
 ## Switching Navigation Modes
 

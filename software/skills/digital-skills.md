@@ -50,21 +50,16 @@ Sends an email with the robot's current camera view attached.
 
 ```python
 class SendPictureViaEmail(Skill):
-    def get_required_robot_states(self) -> list[RobotStateType]:
-        return [RobotStateType.LAST_MAIN_CAMERA_IMAGE_B64]
-
-    def update_robot_state(self, **kwargs):
-        self.last_main_camera_image_b64 = kwargs.get(
-            RobotStateType.LAST_MAIN_CAMERA_IMAGE_B64.value
-        )
+    # Declare camera image dependency - updated at 50Hz while skill runs
+    image = RobotState(RobotStateType.LAST_MAIN_CAMERA_IMAGE_B64)
 
     def execute(self, subject: str, message: str, recipient: str = None):
-        if not self.last_main_camera_image_b64:
+        if not self.image:
             return "No image available to send", SkillResult.FAILURE
         # Attach image and send
 ```
 
-This skill demonstrates **state dependencies**—declaring required robot state that the system provides at 50Hz.
+This skill demonstrates **state dependencies**—using the `RobotState` descriptor to declare required robot state that the system updates at 50Hz.
 
 ### RetrieveEmails
 
@@ -151,18 +146,23 @@ def execute(self, query: str):
 
 ## Requesting Robot State
 
-Skills can declare dependencies on robot sensor data:
+Skills declare sensor data dependencies using the `RobotState` descriptor:
 
 ```python
-from brain_client.skill_types import RobotStateType
+from brain_client.skill_types import RobotState, RobotStateType
 
 class MySkill(Skill):
-    def get_required_robot_states(self) -> list[RobotStateType]:
-        return [RobotStateType.LAST_MAIN_CAMERA_IMAGE_B64]
+    # Declare state dependencies at class level
+    image = RobotState(RobotStateType.LAST_MAIN_CAMERA_IMAGE_B64)
+    odom = RobotState(RobotStateType.LAST_ODOM)
 
-    def update_robot_state(self, **kwargs):
-        self.image = kwargs.get(RobotStateType.LAST_MAIN_CAMERA_IMAGE_B64.value)
+    def execute(self):
+        if self.image:
+            # Use the latest camera frame
+            pass
 ```
+
+The system automatically updates declared state at 50Hz while your skill runs. Always check for `None` on first access.
 
 Available state types:
 
@@ -172,6 +172,8 @@ Available state types:
 | `LAST_ODOM` | Current odometry |
 | `LAST_MAP` | Occupancy grid |
 | `LAST_HEAD_POSITION` | Head tilt angle |
+
+See [Robot State](robot-state.md) for more details on the RobotState system.
 
 ## Cancellation
 

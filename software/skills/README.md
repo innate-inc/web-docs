@@ -4,88 +4,80 @@ Skills are atomic robot capabilities that BASIC chains together to accomplish co
 
 When BASIC receives a request like "check on grandma," it decomposes this into a skill chain: navigate to bedroom → look around → send picture via email → speak reassurance. Four skills, one coherent behavior.
 
-## Core Interface
+## Two Types of Skills
 
-Every skill implements three methods that BASIC uses for orchestration:
+Skills are defined in one of two ways:
 
-| Method | Purpose |
-|--------|---------|
-| `guidelines()` | Tells BASIC when and how to use the skill |
-| `execute()` | Performs the skill's action, returns result and status |
-| `cancel()` | Safely interrupts execution at any point |
+### Code-Defined Skills
 
-### Skill Template
+Python classes that implement explicit logic. The AI agent reads your code's function signature and docstrings to understand what the skill does and how to call it.
 
 ```python
-from brain_client.skill_types import Skill, SkillResult
+class LookAround(Skill):
+    mobility = Interface(InterfaceType.MOBILITY)
+    head = Interface(InterfaceType.HEAD)
 
-class MySkill(Skill):
-    def __init__(self, logger):
-        super().__init__(logger)
-    
-    @property
-    def name(self):
-        return "my_skill"  # Unique identifier
-    
-    def guidelines(self):
-        return """
-        Use this skill when:
-        - [Specific situation 1]
-        - [Specific situation 2]
-        
-        Do not use when:
-        - [Limitation 1]
-        - [Limitation 2]
-        """
-    
-    def execute(self, param1: str, param2: float = 1.0):
-        # Perform the skill's action
-        return "Result message", SkillResult.SUCCESS
-    
-    def cancel(self):
-        # Stop gracefully, leave robot in safe state
-        return "Cancelled"
+    def execute(self):
+        """Rotate and scan the environment."""
+        self.head.set_position(-15)  # Look down
+        self.mobility.rotate(math.pi)  # Turn 180°
+        ...
 ```
 
-Skills are auto-discovered: drop a Python file in the `skills/` directory and the system loads it on startup.
+Use code-defined skills for:
+- **Physical behaviors** — Direct control of base, arm, and head
+- **Digital operations** — Emails, API calls, web services
+- **Coordinated behaviors** — Sequencing multiple actions with explicit logic
+- **Sensor processing** — Vision, scanning, object detection
 
-## Skill Types
+### Policy-Defined Skills (End-to-End)
 
-Skills divide into two categories based on how they're defined:
+Neural network policies trained from demonstration. Currently uses **ACT (Action Chunking with Transformers)** for manipulation tasks.
 
-### Code Skills
+```json
+{
+    "name": "pick_cup",
+    "type": "learned",
+    "guidelines": "Use when you need to pick up a cup",
+    "execution": {
+        "model_type": "act_policy",
+        "checkpoint": "policy_step_50000.pth"
+    }
+}
+```
 
-Python classes that implement explicit logic. Used for:
-- Navigation (path planning, movement)
-- Digital operations (emails, API calls)
-- Any behavior expressible as code
+Use policy-defined skills for:
+- **Manipulation** — Picking, placing, grasping objects
+- **Tasks requiring visual adaptation** — The policy reacts to what it sees
+- **Behaviors hard to express in code** — Complex motions learned from demonstration
 
-### Physical Skills
+See [Policy-Defined Skills](policy-defined-skills.md) for details on creating and training learned skills.
 
-Defined by `metadata.json` plus associated data files. Two variants:
+## Documentation
 
-| Type | Definition | Use Case |
-|------|------------|----------|
-| **Learned** | Neural network checkpoint (ACT policy) | Manipulation tasks requiring visual adaptation |
-| **Replay** | Recorded action sequence (H5 file) | Repeatable gestures and motions |
+### Code-Defined Skills
+- [**Overview**](code-defined-skills.md) — Principles and the Skill class
+- [**Navigation Interfaces**](navigation-interfaces.md) — Mobility control, rotation, velocity commands
+- [**Body Control Interfaces**](body-control-interfaces.md) — Arm manipulation, head movement, IK
+- [**Robot State**](robot-state.md) — Camera, odometry, map, sensor data
+- [**Physical Skill Examples**](physical-skill-examples.md) — Full-body behaviors using nav + manipulation
+- [**Digital Skills**](digital-skills.md) — APIs, email, web services, external agents
 
-Physical skills are created through demonstration rather than programming—show the robot what to do, and it learns the behavior.
+### Policy-Defined Skills
+- [**Overview**](policy-defined-skills.md) — Training and deploying learned manipulation skills
 
-## Skill Categories
+## Skill Directories
 
-The following pages cover each skill category in detail:
+Skills are auto-discovered from two directories:
 
-- [**Navigation Skills**](navigation-skills.md) — Moving through space with Nav2 integration
-- [**Manipulation Skills**](manipulation-skills.md) — Learned and replay physical skills
-- [**Digital Skills**](digital-skills.md) — Email, API, and external service integration
-- [**Code-Based Physical Skills**](more-physical-skills.md) — Custom physical behaviors in Python
+| Directory | Purpose |
+|-----------|---------|
+| `~/skills/` | **Your skills** — put custom skills here |
+| `innate-os/skills/` | **Built-in skills** — templates and examples, don't modify |
 
-Each page includes working examples from the codebase and guidance on creating new skills.
+| Skill Type | Format |
+|------------|--------|
+| Code-defined | `*.py` — Python class extending `Skill` |
+| Policy-defined | `<name>/metadata.json` — JSON metadata + model checkpoint |
 
-## Extensibility
-
-The skill system is designed for growth. New capabilities are added by:
-1. Dropping a Python file in `skills/` (code skills)
-2. Creating a `skills/<name>/metadata.json` directory (physical skills)
-
-No registration or configuration required. The robot discovers and loads new skills automatically.
+No registration required. Drop a file in the right place and the robot loads it on startup.

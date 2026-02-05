@@ -1,10 +1,10 @@
-# Manipulation Skills
+# Policy-Defined Skills
 
-Manipulation skills enable the robot to interact with the physical world—picking up objects, making gestures, performing dexterous tasks. Unlike navigation, where explicit path planning works well, manipulation typically requires learning from demonstration due to the high variability in real-world scenarios.
+Policy-defined skills are neural network policies that run end-to-end—taking sensor input and directly outputting robot actions. Unlike code-defined skills where you write explicit logic, policy-defined skills learn behaviors from demonstration.
 
-## Physical Skills Overview
+This approach works well for manipulation tasks where the variability of real-world scenarios makes explicit programming impractical.
 
-Manipulation skills are almost always **physical skills**—defined by demonstration rather than code. The system supports two types:
+## Two Types of Policies
 
 | Type | Definition | Use Case |
 |------|------------|----------|
