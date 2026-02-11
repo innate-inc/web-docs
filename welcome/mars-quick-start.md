@@ -83,11 +83,13 @@ You can observe which ones are installed by going in the app to Skills (in the t
 
 
 
+<!-- TODO: Add video
 To run one, go back to the home screen, select manual control, and open the skills menu to pick one to use. Then press the <i class="fa-play">:play:</i> button and observe.
 
 
 
 **VIDEO**
+-->
 
 
 
@@ -99,11 +101,13 @@ Try out the "**Roast me**" one, the "**Find my shoes**", or the "**Pick up the t
 
 
 
+<!-- TODO: Add video
 Before running an agent, you can observe what it was programmed to do.
 
 
 
 **VIDEO**
+-->
 
 
 
@@ -117,21 +121,25 @@ To create a map, in the app, go in Settings -> Mapping and press the <i class="f
 
 
 
+<!-- TODO: Add video
 Once you're satisfied of how it looks like, you can save the map which will automatically activate in your robot.
 
 
 
 **VIDEO**
+-->
 
 
 
 ## Navigate, this time with memory
 
+<!-- TODO: Add video
 Now that MARS has spatial memory, you can drive it around and it will memorize what it sees. Try to drive it around your kitchen then, in agentic mode, ask "go to the fridge" and observe it going there.
 
 
 
 **VIDEO**
+-->
 
 
 
@@ -159,17 +167,25 @@ You can create additional skills like "wave" and "navigate" to use the arm for l
 
 Go to the following pages to learn more:
 
-PAGE FOR TEACHING THE ARM A SKILL
+{% content-ref url="../software/skills/policy-defined-skills.md" %}
+[Policy-Defined Skills](../software/skills/policy-defined-skills.md)
+{% endcontent-ref %}
 
-PAGE TO WRITE SKILLS WITH CODE
+{% content-ref url="../software/skills/code-defined-skills.md" %}
+[Code-Defined Skills](../software/skills/code-defined-skills.md)
+{% endcontent-ref %}
 
-PAGE TO TEACH AN ARM SKILL WITH INVERSE KINEMATICS
+{% content-ref url="../software/skills/body-control-interfaces.md" %}
+[Body Control Interfaces](../software/skills/body-control-interfaces.md)
+{% endcontent-ref %}
 
-PAGE FOR SHARING AN AGENT
+<!-- TODO: PAGE FOR SHARING AN AGENT — page does not exist yet -->
 
-ADVANCED: USE AND MODIFY THE CORE ROS2 OS
+{% content-ref url="../software/ros2-core.md" %}
+[ROS2 Core](../software/ros2-core.md)
+{% endcontent-ref %}
 
-ADVANCED: IMPLEMENTING A DIFFERENT MANIPULATION MODEL
+<!-- TODO: ADVANCED: IMPLEMENTING A DIFFERENT MANIPULATION MODEL — page does not exist yet -->
 
 
 
